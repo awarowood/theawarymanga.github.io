@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="mn">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Awary Manga</title>
+<title>THE AWARY MANGA</title>
 
 <style>
-
 * {
     margin: 0;
     padding: 0;
@@ -26,106 +23,74 @@ body {
     font-family: Georgia, "Times New Roman", serif;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-
-    background: rgba(8,8,9,0.96);
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid #2b2925;
-
-    padding: 20px 7%;
+    background: rgba(8,8,9,.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #302c25;
+    padding: 18px 5%;
 }
 
 .header-inner {
-    max-width: 1300px;
+    max-width: 1250px;
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    gap: 30px;
+    gap: 25px;
 }
 
 .logo {
-    color: #cdbb91;
-
-    font-size: 23px;
+    color: #d6c59d;
+    font-size: 20px;
     letter-spacing: 4px;
-
     white-space: nowrap;
 }
 
 nav {
     display: flex;
-    gap: 22px;
-
+    gap: 20px;
     overflow-x: auto;
 }
 
 nav a {
     color: #aaa;
-
     text-decoration: none;
-
     font-size: 13px;
-
     white-space: nowrap;
-
-    transition: 0.3s;
 }
 
 nav a:hover {
     color: #d6c59d;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
-    min-height: 72vh;
-
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
-
     padding: 70px 20px;
+    position: relative;
 
     background:
-        radial-gradient(
-            circle at center,
-            rgba(96,72,47,0.28),
-            transparent 45%
-        ),
-        linear-gradient(
-            180deg,
-            #0d0c0d,
-            #080809
-        );
-
-    position: relative;
+        radial-gradient(circle at center,
+        rgba(112,84,53,.28),
+        transparent 45%),
+        linear-gradient(#0e0d0e,#080809);
 }
 
-.hero::before {
+.hero:before {
     content: "和";
-
     position: absolute;
-
     font-size: 260px;
-
-    color: rgba(205,187,145,0.025);
+    color: rgba(205,187,145,.025);
 }
 
 .hero-content {
@@ -135,48 +100,32 @@ nav a:hover {
 
 .small-title {
     color: #a79878;
-
     letter-spacing: 6px;
-
     font-size: 12px;
-
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .hero h1 {
-    font-size: clamp(42px,8vw,85px);
-
+    font-size: clamp(42px,8vw,82px);
     letter-spacing: 8px;
-
     color: #d6c59d;
 }
 
 .hero p {
-    margin-top: 20px;
-
+    margin-top: 18px;
     color: #888;
-
     font-size: 15px;
 }
 
 .hero-button {
     display: inline-block;
-
-    margin-top: 35px;
-
+    margin-top: 32px;
     padding: 13px 28px;
-
     border: 1px solid #6d624c;
-
     color: #d6c59d;
-
     text-decoration: none;
-
-    font-size: 13px;
-
     letter-spacing: 2px;
-
-    transition: 0.3s;
+    font-size: 13px;
 }
 
 .hero-button:hover {
@@ -184,168 +133,126 @@ nav a:hover {
     color: #080809;
 }
 
-
-/* =========================
-   SECTION
-========================= */
+/* SECTIONS */
 
 .section {
-    width: 86%;
-    max-width: 1300px;
-
-    margin: 80px auto;
-}
-
-.section-header {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    margin-bottom: 25px;
+    width: 90%;
+    max-width: 1250px;
+    margin: 75px auto;
 }
 
 .section-title {
     color: #d6c59d;
-
     font-size: 25px;
-
     letter-spacing: 2px;
+    margin-bottom: 25px;
 }
 
+/* FEATURED */
 
-/* =========================
-   SEARCH
-========================= */
-
-.search-container {
-    margin-bottom: 30px;
+.featured-row {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-snap-type: x mandatory;
 }
 
-#searchInput {
-    width: 100%;
+.featured-card {
+    min-width: 190px;
+    scroll-snap-align: start;
+}
 
-    padding: 16px 20px;
-
-    background: #111113;
-
-    border: 1px solid #35312a;
-
+.featured-card img {
+    width: 190px;
+    height: 285px;
+    object-fit: cover;
     border-radius: 5px;
+    border: 1px solid #302d27;
+}
 
+.featured-card h3 {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.featured-card p {
+    margin-top: 5px;
+    color: #9c8d6b;
+    font-size: 12px;
+}
+
+/* SEARCH */
+
+.search {
+    width: 100%;
+    padding: 16px 18px;
+    background: #111113;
+    border: 1px solid #35312a;
+    border-radius: 5px;
     color: white;
-
     font-family: inherit;
-
-    font-size: 14px;
-
     outline: none;
+    margin-bottom: 20px;
 }
 
-#searchInput:focus {
-    border-color: #75664b;
+.search:focus {
+    border-color: #8a7958;
 }
 
-#searchInput::placeholder {
-    color: #777;
-}
-
-
-/* =========================
-   GENRE BUTTONS
-========================= */
+/* GENRES */
 
 .genre-buttons {
     display: flex;
-
-    gap: 10px;
-
+    gap: 9px;
     flex-wrap: wrap;
-
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
-.genre-button {
-    padding: 10px 17px;
-
+.genre {
+    padding: 9px 15px;
     background: transparent;
-
     border: 1px solid #302d28;
-
     color: #aaa;
-
     border-radius: 3px;
-
     cursor: pointer;
-
     font-family: inherit;
-
-    font-size: 12px;
-
-    transition: 0.3s;
 }
 
-.genre-button:hover {
-    color: #d6c59d;
-
-    border-color: #75664b;
-}
-
-.genre-button.active {
+.genre:hover,
+.genre.active {
     color: #080809;
-
     background: #d6c59d;
-
     border-color: #d6c59d;
 }
 
-
-/* =========================
-   MANGA GRID
-========================= */
+/* MANGA GRID */
 
 .manga-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fill,
-            minmax(170px, 1fr)
-        );
-
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill,minmax(170px,1fr));
+    gap: 22px;
 }
 
 .manga-card {
     background: #111113;
-
     border: 1px solid #29272a;
-
     border-radius: 6px;
-
     overflow: hidden;
-
-    transition: 0.3s;
-
     cursor: pointer;
+    transition: .3s;
 }
 
 .manga-card:hover {
-    transform: translateY(-7px);
-
+    transform: translateY(-6px);
     border-color: #6c604a;
 }
 
 .manga-cover {
     width: 100%;
-
     height: 250px;
-
     object-fit: cover;
-
     display: block;
-
-    background: #18181a;
 }
 
 .manga-info {
@@ -354,126 +261,44 @@ nav a:hover {
 
 .manga-title {
     font-size: 16px;
-
-    color: #eee;
 }
 
 .manga-genres {
     color: #777;
-
     font-size: 11px;
-
     margin-top: 6px;
 }
 
-.manga-status {
+.status {
     margin-top: 9px;
-
     font-size: 11px;
 }
 
 .ongoing {
-    color: #bda978;
+    color: #cdbb91;
 }
 
 .completed {
-    color: #8e8e8e;
+    color: #999;
 }
 
 .upcoming {
     color: #9c806b;
 }
 
-
-/* =========================
-   FEATURED
-========================= */
-
-.featured-row {
-    display: flex;
-
-    gap: 20px;
-
-    overflow-x: auto;
-
-    padding-bottom: 15px;
-
-    scroll-snap-type: x mandatory;
-}
-
-.featured-row::-webkit-scrollbar {
-    height: 4px;
-}
-
-.featured-row::-webkit-scrollbar-thumb {
-    background: #5d513d;
-}
-
-.featured-card {
-    min-width: 190px;
-
-    scroll-snap-align: start;
-}
-
-.featured-card img {
-    width: 190px;
-
-    height: 285px;
-
-    object-fit: cover;
-
-    border-radius: 5px;
-
-    border: 1px solid #302d27;
-}
-
-.featured-card h3 {
-    margin-top: 10px;
-
-    font-size: 15px;
-}
-
-.featured-card p {
-    margin-top: 5px;
-
-    color: #8d856f;
-
-    font-size: 12px;
-}
-
-
-/* =========================
-   LATEST CHAPTERS
-========================= */
+/* LATEST */
 
 .latest-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(260px,1fr)
-        );
-
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 15px;
 }
 
 .chapter {
     padding: 20px;
-
     background: #111113;
-
     border: 1px solid #29272a;
-
     border-left: 2px solid #75664b;
-
-    transition: 0.3s;
-}
-
-.chapter:hover {
-    transform: translateX(5px);
-
-    background: #151416;
 }
 
 .chapter-title {
@@ -482,9 +307,7 @@ nav a:hover {
 
 .chapter-info {
     margin-top: 8px;
-
     color: #777;
-
     font-size: 12px;
 }
 
@@ -492,45 +315,32 @@ nav a:hover {
     color: #cdbb91;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
     margin-top: 100px;
-
     padding: 50px 20px;
-
     text-align: center;
-
     border-top: 1px solid #272529;
-
     color: #666;
 }
 
 .footer-logo {
     color: #b8a77f;
-
     letter-spacing: 4px;
-
     margin-bottom: 12px;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:700px) {
 
     header {
-        padding: 18px 5%;
+        padding: 16px 5%;
     }
 
     .header-inner {
         flex-direction: column;
-
         align-items: flex-start;
     }
 
@@ -548,340 +358,220 @@ footer {
 
     .section {
         width: 90%;
-
         margin: 60px auto;
     }
 
     .manga-grid {
-        grid-template-columns:
-            repeat(
-                2,
-                minmax(0,1fr)
-            );
-
-        gap: 15px;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 14px;
     }
 
     .manga-cover {
         height: 230px;
     }
 
+    .featured-card {
+        min-width: 165px;
+    }
+
+    .featured-card img {
+        width: 165px;
+        height: 250px;
+    }
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
-
 <div class="header-inner">
 
 <div class="logo">
-THE AWARY
+THE AWARY MANGA
 </div>
 
 <nav>
-
 <a href="#home">Нүүр</a>
-
-<a href="#library">Манга</a>
-
-<a href="#genres">Төрөл</a>
-
-<a href="#latest">Шинэ</a>
-
 <a href="#featured">Онцлох</a>
-
+<a href="#library">Манга</a>
+<a href="#genres">Төрөл</a>
+<a href="#latest">Шинэ бүлэг</a>
 </nav>
 
 </div>
-
 </header>
-
-
-
-<!-- =========================
-     HERO
-========================= -->
 
 <section class="hero" id="home">
 
 <div class="hero-content">
 
 <div class="small-title">
-МАНГАНЫ ӨРГӨӨ
+マンガの世界 • МАНГАНЫ ӨРГӨӨ
 </div>
 
-<h1>
-THE AWARY
-</h1>
+<h1>THE AWARY</h1>
 
 <p>
 Хуудаснаас цааш үргэлжлэх түүхүүд.
 </p>
 
-<a
-href="#library"
-class="hero-button">
-
+<a href="#library" class="hero-button">
 МАНГА ҮЗЭХ
-
 </a>
 
 </div>
 
 </section>
 
-
-
-<!-- =========================
-     FEATURED
-========================= -->
-
-<section
-class="section"
-id="featured">
-
-<div class="section-header">
+<section class="section" id="featured">
 
 <h2 class="section-title">
 Онцлох манга
 </h2>
 
-</div>
-
-
 <div class="featured-row">
-
 
 <div class="featured-card">
 
-<img src="https://via.placeholder.com/400x600/211d19/cdbb91?text=Awary">
+<img src="photo-output.png">
 
 <h3>
-Онцлох манга
+The Awary
 </h3>
 
 <p>
-Гарч байгаа
+● Гарч байгаа
 </p>
 
 </div>
 
-
-
 <div class="featured-card">
 
-<img src="https://via.placeholder.com/400x600/19191b/cdbb91?text=Moonlight">
+<img src="photo-output.png">
 
 <h3>
 Moonlight
 </h3>
 
 <p>
-Гарч байгаа
+● Гарч байгаа
 </p>
 
 </div>
 
-
-
 <div class="featured-card">
 
-<img src="https://via.placeholder.com/400x600/211c20/cdbb91?text=Another">
+<img src="photo-output.png">
 
 <h3>
 Another Story
 </h3>
 
 <p>
-Дууссан
+● Дууссан
 </p>
 
 </div>
-
-
 
 <div class="featured-card">
 
-<img src="https://via.placeholder.com/400x600/181d21/cdbb91?text=Unknown">
+<img src="photo-output.png">
 
 <h3>
-Unknown Tale
+Dark Moon
 </h3>
 
 <p>
-Удахгүй
+● Удахгүй
 </p>
 
 </div>
 
-
 </div>
-
 </section>
 
-
-
-<!-- =========================
-     MANGA LIBRARY
-========================= -->
-
-<section
-class="section"
-id="library">
-
-<div class="section-header">
+<section class="section" id="library">
 
 <h2 class="section-title">
 Манганы сан
 </h2>
 
-</div>
-
-
-<!-- SEARCH -->
-
-<div class="search-container">
-
 <input
-type="text"
+class="search"
 id="searchInput"
+type="text"
 placeholder="🔍 Манганы нэрээр хайх..."
 >
 
-</div>
+<div class="genre-buttons" id="genres">
 
-
-
-<!-- GENRES -->
-
-<div
-class="genre-buttons"
-id="genres">
-
-<button
-class="genre-button active"
-data-genre="all">
-
+<button class="genre active" data-genre="all">
 Бүгд
-
 </button>
 
-<button
-class="genre-button"
-data-genre="romance">
-
+<button class="genre" data-genre="romance">
 Романтик
-
 </button>
 
-<button
-class="genre-button"
-data-genre="drama">
-
+<button class="genre" data-genre="drama">
 Драма
-
 </button>
 
-<button
-class="genre-button"
-data-genre="fantasy">
-
+<button class="genre" data-genre="fantasy">
 Уран зөгнөл
-
 </button>
 
-<button
-class="genre-button"
-data-genre="action">
-
+<button class="genre" data-genre="action">
 Адал явдалт
-
 </button>
 
-<button
-class="genre-button"
-data-genre="mystery">
-
+<button class="genre" data-genre="mystery">
 Нууцлаг
-
 </button>
 
-<button
-class="genre-button"
-data-genre="horror">
-
+<button class="genre" data-genre="horror">
 Аймшиг
-
 </button>
 
-<button
-class="genre-button"
-data-genre="psychological">
-
+<button class="genre" data-genre="psychological">
 Сэтгэлзүй
-
 </button>
 
 </div>
 
+<div class="manga-grid" id="mangaGrid">
 
-
-<!-- MANGA -->
-
-<div
-class="manga-grid"
-id="mangaGrid">
-
-
-<div
-class="manga-card"
-data-title="Онцлох манга"
+<div class="manga-card"
+data-title="The Awary"
 data-genres="romance drama">
 
-<img
-class="manga-cover"
-src="https://via.placeholder.com/400x600/211d19/cdbb91?text=Awary"
->
+<img class="manga-cover"
+src="photo-output.png">
 
 <div class="manga-info">
 
 <div class="manga-title">
-Онцлох манга
+The Awary
 </div>
 
 <div class="manga-genres">
 Романтик • Драма
 </div>
 
-<div class="manga-status ongoing">
+<div class="status ongoing">
 ● Гарч байгаа
 </div>
 
 </div>
-
 </div>
 
-
-
-<div
-class="manga-card"
+<div class="manga-card"
 data-title="Moonlight"
 data-genres="romance fantasy">
 
-<img
-class="manga-cover"
-src="https://via.placeholder.com/400x600/19191b/cdbb91?text=Moonlight"
->
+<img class="manga-cover"
+src="photo-output.png">
 
 <div class="manga-info">
 
@@ -893,25 +583,19 @@ Moonlight
 Романтик • Уран зөгнөл
 </div>
 
-<div class="manga-status ongoing">
+<div class="status ongoing">
 ● Гарч байгаа
 </div>
 
 </div>
-
 </div>
 
-
-
-<div
-class="manga-card"
+<div class="manga-card"
 data-title="Another Story"
 data-genres="drama psychological">
 
-<img
-class="manga-cover"
-src="https://via.placeholder.com/400x600/211c20/cdbb91?text=Another"
->
+<img class="manga-cover"
+src="photo-output.png">
 
 <div class="manga-info">
 
@@ -923,85 +607,19 @@ Another Story
 Драма • Сэтгэлзүй
 </div>
 
-<div class="manga-status completed">
+<div class="status completed">
 ● Дууссан
 </div>
 
 </div>
-
 </div>
 
-
-
-<div
-class="manga-card"
-data-title="Unknown Tale"
-data-genres="mystery horror">
-
-<img
-class="manga-cover"
-src="https://via.placeholder.com/400x600/181d21/cdbb91?text=Unknown"
->
-
-<div class="manga-info">
-
-<div class="manga-title">
-Unknown Tale
-</div>
-
-<div class="manga-genres">
-Нууцлаг • Аймшиг
-</div>
-
-<div class="manga-status upcoming">
-● Удахгүй гарна
-</div>
-
-</div>
-
-</div>
-
-
-
-<div
-class="manga-card"
-data-title="Golden Spring"
-data-genres="romance drama">
-
-<img
-class="manga-cover"
-src="https://via.placeholder.com/400x600/28231b/cdbb91?text=Golden"
->
-
-<div class="manga-info">
-
-<div class="manga-title">
-Golden Spring
-</div>
-
-<div class="manga-genres">
-Романтик • Драма
-</div>
-
-<div class="manga-status completed">
-● Дууссан
-</div>
-
-</div>
-
-</div>
-
-
-
-<div
-class="manga-card"
+<div class="manga-card"
 data-title="Dark Moon"
 data-genres="horror mystery">
 
-<img
-class="manga-cover"
-src="https://via.placeholder.com/400x600/17171a/cdbb91?text=Dark+Moon"
->
+<img class="manga-cover"
+src="photo-output.png">
 
 <div class="manga-info">
 
@@ -1013,45 +631,28 @@ Dark Moon
 Аймшиг • Нууцлаг
 </div>
 
-<div class="manga-status ongoing">
-● Гарч байгаа
+<div class="status upcoming">
+● Удахгүй гарна
 </div>
 
 </div>
-
 </div>
 
-
 </div>
-
 </section>
 
-
-
-<!-- =========================
-     LATEST
-========================= -->
-
-<section
-class="section"
-id="latest">
-
-<div class="section-header">
+<section class="section" id="latest">
 
 <h2 class="section-title">
 Шинээр гарсан бүлгүүд
 </h2>
 
-</div>
-
-
 <div class="latest-grid">
-
 
 <div class="chapter">
 
 <div class="chapter-title">
-Онцлох манга — 12-р бүлэг
+The Awary — 12-р бүлэг
 </div>
 
 <div class="chapter-info new">
@@ -1059,8 +660,6 @@ id="latest">
 </div>
 
 </div>
-
-
 
 <div class="chapter">
 
@@ -1074,8 +673,6 @@ Moonlight — 21-р бүлэг
 
 </div>
 
-
-
 <div class="chapter">
 
 <div class="chapter-title">
@@ -1087,8 +684,6 @@ Another Story — 7-р бүлэг
 </div>
 
 </div>
-
-
 
 <div class="chapter">
 
@@ -1102,16 +697,8 @@ Dark Moon — 15-р бүлэг
 
 </div>
 
-
 </div>
-
 </section>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -1129,12 +716,6 @@ THE AWARY MANGA
 
 </footer>
 
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
 
 const searchInput =
@@ -1144,103 +725,67 @@ const mangaCards =
 document.querySelectorAll(".manga-card");
 
 const genreButtons =
-document.querySelectorAll(".genre-button");
-
+document.querySelectorAll(".genre");
 
 let selectedGenre = "all";
 
-
 function filterManga() {
 
-    const search =
-        searchInput.value
-        .toLowerCase()
-        .trim();
+const search =
+searchInput.value.toLowerCase().trim();
 
+mangaCards.forEach(card => {
 
-    mangaCards.forEach(card => {
+const title =
+card.dataset.title.toLowerCase();
 
-        const title =
-            card.dataset.title
-            .toLowerCase();
+const genres =
+card.dataset.genres.toLowerCase();
 
+const matchesSearch =
+title.includes(search);
 
-        const genres =
-            card.dataset.genres
-            .toLowerCase();
+const matchesGenre =
+selectedGenre === "all" ||
+genres.includes(selectedGenre);
 
+card.style.display =
+matchesSearch && matchesGenre
+? ""
+: "none";
 
-        const matchesSearch =
-            title.includes(search);
-
-
-        const matchesGenre =
-            selectedGenre === "all"
-            ||
-            genres.includes(selectedGenre);
-
-
-        if (
-            matchesSearch
-            &&
-            matchesGenre
-        ) {
-
-            card.style.display = "";
-
-        } else {
-
-            card.style.display = "none";
-
-        }
-
-    });
+});
 
 }
 
-
-
 searchInput.addEventListener(
-    "input",
-    filterManga
+"input",
+filterManga
 );
-
-
 
 genreButtons.forEach(button => {
 
-    button.addEventListener(
-        "click",
-        () => {
+button.addEventListener(
+"click",
+() => {
 
-            genreButtons.forEach(btn => {
+genreButtons.forEach(btn =>
+btn.classList.remove("active")
+);
 
-                btn.classList.remove(
-                    "active"
-                );
+button.classList.add("active");
 
-            });
+selectedGenre =
+button.dataset.genre;
 
+filterManga();
 
-            button.classList.add(
-                "active"
-            );
-
-
-            selectedGenre =
-                button.dataset.genre;
-
-
-            filterManga();
-
-        }
-    );
+}
+);
 
 });
 
 </script>
 
-
 </body>
-
 </html>
