@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Awary Manga</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0b0d;
+    color: #eee;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+header {
+    padding: 24px 7%;
+    border-bottom: 1px solid #292929;
+    background: #0b0b0d;
+}
+
+.logo {
+    font-size: 25px;
+    letter-spacing: 4px;
+    color: #d6c39a;
+}
+
+nav {
+    margin-top: 18px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d6c39a;
+}
+
+.hero {
+    padding: 90px 7%;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, #242020 0%, #0b0b0d 65%);
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 75px);
+    letter-spacing: 7px;
+    color: #d6c39a;
+}
+
+.hero p {
+    margin-top: 18px;
+    color: #999;
+    font-size: 16px;
+}
+
+.section {
+    width: 86%;
+    max-width: 1250px;
+    margin: 55px auto;
+}
+
+.section-title {
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: #d6c39a;
+}
+
+.manga-row {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-snap-type: x mandatory;
+}
+
+.manga-row::-webkit-scrollbar {
+    height: 5px;
+}
+
+.manga-row::-webkit-scrollbar-thumb {
+    background: #4b4435;
+}
+
+.card {
+    min-width: 160px;
+    width: 160px;
+    scroll-snap-align: start;
+}
+
+.card img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #19191c;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.status {
+    color: #999;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.latest {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+}
+
+.chapter {
+    background: #141416;
+    border: 1px solid #29292c;
+    padding: 18px;
+    border-radius: 7px;
+}
+
+.chapter h3 {
+    font-size: 16px;
+}
+
+.chapter p {
+    color: #888;
+    margin-top: 7px;
+    font-size: 13px;
+}
+
+.new {
+    color: #d6c39a;
+}
+
+footer {
+    margin-top: 80px;
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #292929;
+    color: #666;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .section {
+        width: 90%;
+    }
+
+    .card {
+        min-width: 135px;
+        width: 135px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        THE AWARY MANGA
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Manga</a>
+        <a href="#">Genres</a>
+        <a href="#">Latest</a>
+        <a href="#">Popular</a>
+        <a href="#">About</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>THE AWARY MANGA</h1>
+
+    <p>
+        Stories beyond the pages.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <h2 class="section-title">
+        Featured Manga
+    </h2>
+
+    <div class="manga-row">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x450">
+            <h3>Featured Manga</h3>
+            <p class="status">Ongoing</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x450">
+            <h3>Another Story</h3>
+            <p class="status">Completed</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x450">
+            <h3>Moonlight</h3>
+            <p class="status">Ongoing</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x450">
+            <h3>Unknown Tale</h3>
+            <p class="status">Upcoming</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <h2 class="section-title">
+        Latest Chapters
+    </h2>
+
+    <div class="latest">
+
+        <div class="chapter">
+            <h3>Featured Manga — Chapter 12</h3>
+            <p class="new">NEW • Just released</p>
+        </div>
+
+        <div class="chapter">
+            <h3>Another Story — Chapter 07</h3>
+            <p class="new">NEW • 2 hours ago</p>
+        </div>
+
+        <div class="chapter">
+            <h3>Moonlight — Chapter 21</h3>
+            <p>Releases in 3 hours</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <h2 class="section-title">
+        Manga Status
+    </h2>
+
+    <div class="latest">
+
+        <div class="chapter">
+            <h3>Ongoing</h3>
+            <p>Manga currently being released.</p>
+        </div>
+
+        <div class="chapter">
+            <h3>Completed</h3>
+            <p>All chapters have been released.</p>
+        </div>
+
+        <div class="chapter">
+            <h3>Upcoming</h3>
+            <p>Coming soon.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 The Awary Manga
+
+</footer>
+
+</body>
+</html>
