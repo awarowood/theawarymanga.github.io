@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>The Awary Manga</title>
+
 
 <style>
 
 /* =========================
-   RESET
+   ҮНДСЭН
 ========================= */
 
 * {
@@ -31,15 +35,18 @@ body {
 
 
 /* =========================
-   HEADER
+   ДЭЭД ЦЭС
 ========================= */
 
 header {
+
     position: sticky;
     top: 0;
+
     z-index: 1000;
 
-    background: rgba(8, 8, 9, 0.94);
+    background: rgba(8,8,9,0.95);
+
     backdrop-filter: blur(12px);
 
     border-bottom: 1px solid #2b2925;
@@ -48,54 +55,69 @@ header {
 }
 
 .header-inner {
+
     max-width: 1300px;
+
     margin: auto;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     gap: 30px;
 }
 
 .logo {
+
     color: #cdbb91;
 
     font-size: 23px;
+
     letter-spacing: 4px;
 
     white-space: nowrap;
 }
 
 nav {
+
     display: flex;
+
     gap: 25px;
 }
 
 nav a {
+
     color: #aaa;
+
     text-decoration: none;
 
     font-size: 13px;
+
     letter-spacing: 1px;
 
     transition: 0.3s;
 }
 
 nav a:hover {
+
     color: #d5c39b;
 }
 
 
 /* =========================
-   HERO
+   НҮҮРНИЙ ТАНИЛЦУУЛГА
 ========================= */
 
 .hero {
+
     min-height: 75vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     text-align: center;
@@ -103,58 +125,67 @@ nav a:hover {
     padding: 80px 20px;
 
     background:
-        radial-gradient(
-            circle at center,
-            rgba(96, 72, 47, 0.25),
-            transparent 45%
-        ),
-        linear-gradient(
-            180deg,
-            #0d0c0d,
-            #080809
-        );
+
+    radial-gradient(
+        circle at center,
+        rgba(96,72,47,0.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #0d0c0d,
+        #080809
+    );
 
     position: relative;
 }
 
 .hero::before {
+
     content: "和";
 
     position: absolute;
 
     font-size: 260px;
 
-    color: rgba(205, 187, 145, 0.025);
+    color: rgba(205,187,145,0.025);
 
     font-family: serif;
 }
 
 .hero-content {
+
     position: relative;
+
     z-index: 2;
 }
 
 .small-title {
+
     color: #a79878;
 
     letter-spacing: 6px;
+
     font-size: 12px;
 
     margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: clamp(42px, 8vw, 85px);
+
+    font-size: clamp(42px,8vw,85px);
 
     letter-spacing: 8px;
 
     color: #d6c59d;
 
     text-shadow:
-        0 0 30px rgba(214, 197, 157, 0.08);
+        0 0 30px rgba(214,197,157,0.08);
 }
 
 .hero p {
+
     margin-top: 20px;
 
     color: #888;
@@ -165,6 +196,7 @@ nav a:hover {
 }
 
 .hero-button {
+
     display: inline-block;
 
     margin-top: 35px;
@@ -185,31 +217,39 @@ nav a:hover {
 }
 
 .hero-button:hover {
+
     background: #d6c59d;
+
     color: #080809;
 }
 
 
 /* =========================
-   SECTIONS
+   ХЭСГҮҮД
 ========================= */
 
 .section {
+
     width: 86%;
+
     max-width: 1300px;
 
     margin: 90px auto;
 }
 
 .section-header {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     margin-bottom: 30px;
 }
 
 .section-title {
+
     color: #d6c59d;
 
     font-size: 25px;
@@ -218,6 +258,7 @@ nav a:hover {
 }
 
 .view-all {
+
     color: #777;
 
     text-decoration: none;
@@ -229,10 +270,11 @@ nav a:hover {
 
 
 /* =========================
-   FEATURED
+   ОНЦЛОХ МАНГА
 ========================= */
 
 .manga-row {
+
     display: flex;
 
     gap: 22px;
@@ -247,14 +289,17 @@ nav a:hover {
 }
 
 .manga-row::-webkit-scrollbar {
+
     height: 4px;
 }
 
 .manga-row::-webkit-scrollbar-thumb {
+
     background: #5d513d;
 }
 
 .card {
+
     min-width: 190px;
 
     scroll-snap-align: start;
@@ -263,11 +308,14 @@ nav a:hover {
 }
 
 .card:hover {
+
     transform: translateY(-7px);
 }
 
 .cover {
+
     width: 190px;
+
     height: 285px;
 
     border-radius: 5px;
@@ -275,16 +323,18 @@ nav a:hover {
     object-fit: cover;
 
     background:
-        linear-gradient(
-            135deg,
-            #29231e,
-            #111
-        );
+
+    linear-gradient(
+        135deg,
+        #29231e,
+        #111
+    );
 
     border: 1px solid #302d27;
 }
 
 .card-title {
+
     margin-top: 12px;
 
     color: #eee;
@@ -293,6 +343,7 @@ nav a:hover {
 }
 
 .card-status {
+
     margin-top: 5px;
 
     color: #8d856f;
@@ -302,19 +353,24 @@ nav a:hover {
 
 
 /* =========================
-   LATEST
+   ШИНЭ БҮЛГҮҮД
 ========================= */
 
 .latest-grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(260px, 1fr));
+    repeat(
+        auto-fit,
+        minmax(260px,1fr)
+    );
 
     gap: 15px;
 }
 
 .chapter {
+
     padding: 22px;
 
     background: #111113;
@@ -327,15 +383,19 @@ nav a:hover {
 }
 
 .chapter:hover {
+
     background: #151416;
+
     transform: translateX(4px);
 }
 
 .chapter-title {
+
     font-size: 16px;
 }
 
 .chapter-info {
+
     margin-top: 8px;
 
     color: #777;
@@ -344,24 +404,30 @@ nav a:hover {
 }
 
 .new {
+
     color: #cdbb91;
 }
 
 
 /* =========================
-   STATUS
+   МАНГАНЫ ТӨЛӨВ
 ========================= */
 
 .status-grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
+    repeat(
+        auto-fit,
+        minmax(220px,1fr)
+    );
 
     gap: 18px;
 }
 
 .status-box {
+
     padding: 28px;
 
     background: #101012;
@@ -374,10 +440,12 @@ nav a:hover {
 }
 
 .status-box:hover {
+
     border-color: #625641;
 }
 
 .status-symbol {
+
     font-size: 28px;
 
     color: #bba982;
@@ -386,12 +454,14 @@ nav a:hover {
 }
 
 .status-box h3 {
+
     color: #ddd;
 
     font-size: 18px;
 }
 
 .status-box p {
+
     color: #777;
 
     font-size: 13px;
@@ -403,10 +473,11 @@ nav a:hover {
 
 
 /* =========================
-   GENRES
+   ТӨРӨЛ
 ========================= */
 
 .genres {
+
     display: flex;
 
     flex-wrap: wrap;
@@ -415,6 +486,7 @@ nav a:hover {
 }
 
 .genre {
+
     padding: 10px 18px;
 
     border: 1px solid #302d28;
@@ -431,6 +503,7 @@ nav a:hover {
 }
 
 .genre:hover {
+
     color: #d6c59d;
 
     border-color: #75664b;
@@ -444,6 +517,7 @@ nav a:hover {
 ========================= */
 
 footer {
+
     margin-top: 120px;
 
     padding: 50px 20px;
@@ -456,6 +530,7 @@ footer {
 }
 
 .footer-logo {
+
     color: #b8a77f;
 
     letter-spacing: 4px;
@@ -464,21 +539,24 @@ footer {
 }
 
 .footer-text {
+
     font-size: 12px;
 }
 
 
 /* =========================
-   MOBILE
+   УТАС
 ========================= */
 
-@media (max-width: 700px) {
+@media (max-width:700px) {
 
     header {
+
         padding: 18px 5%;
     }
 
     .header-inner {
+
         flex-direction: column;
 
         align-items: flex-start;
@@ -487,6 +565,7 @@ footer {
     }
 
     nav {
+
         width: 100%;
 
         overflow-x: auto;
@@ -497,28 +576,34 @@ footer {
     }
 
     nav a {
+
         white-space: nowrap;
     }
 
     .hero {
+
         min-height: 70vh;
     }
 
     .hero h1 {
+
         letter-spacing: 5px;
     }
 
     .section {
+
         width: 90%;
 
         margin: 65px auto;
     }
 
     .card {
+
         min-width: 145px;
     }
 
     .cover {
+
         width: 145px;
 
         height: 220px;
@@ -534,9 +619,7 @@ footer {
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ДЭЭД ЦЭС -->
 
 <header>
 
@@ -546,19 +629,32 @@ footer {
 THE AWARY
 </div>
 
+
 <nav>
 
-<a href="#home">Home</a>
+<a href="#home">
+Нүүр
+</a>
 
-<a href="#manga">Manga</a>
+<a href="#manga">
+Манга
+</a>
 
-<a href="#genres">Genres</a>
+<a href="#genres">
+Төрөл
+</a>
 
-<a href="#latest">Latest</a>
+<a href="#latest">
+Шинэ
+</a>
 
-<a href="#popular">Popular</a>
+<a href="#popular">
+Алдартай
+</a>
 
-<a href="#about">About</a>
+<a href="#about">
+Бидний тухай
+</a>
 
 </nav>
 
@@ -568,28 +664,39 @@ THE AWARY
 
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- НҮҮР -->
 
 <section class="hero" id="home">
 
 <div class="hero-content">
 
 <div class="small-title">
-THE MANGA ARCHIVE
+
+МАНГАНЫ ӨРГӨӨ
+
 </div>
 
+
 <h1>
+
 THE AWARY
+
 </h1>
 
+
 <p>
-Stories beyond the pages.
+
+Хуудаснаас цааш үргэлжлэх түүхүүд.
+
 </p>
 
-<a class="hero-button" href="#manga">
-EXPLORE MANGA
+
+<a
+class="hero-button"
+href="#manga">
+
+МАНГА ҮЗЭХ
+
 </a>
 
 </div>
@@ -598,21 +705,31 @@ EXPLORE MANGA
 
 
 
-<!-- =========================
-     FEATURED MANGA
-========================= -->
+<!-- ОНЦЛОХ -->
 
-<section class="section" id="manga">
+<section
+class="section"
+id="manga">
+
 
 <div class="section-header">
 
+
 <h2 class="section-title">
-Featured Manga
+
+Онцлох манга
+
 </h2>
 
-<a class="view-all" href="#">
-VIEW ALL →
+
+<a
+class="view-all"
+href="#">
+
+Бүгдийг харах →
+
 </a>
+
 
 </div>
 
@@ -628,11 +745,15 @@ src="https://via.placeholder.com/400x600/211d19/cdbb91?text=Awary"
 >
 
 <div class="card-title">
-Featured Manga
+
+Онцлох манга
+
 </div>
 
 <div class="card-status">
-Ongoing
+
+Гарч байгаа
+
 </div>
 
 </div>
@@ -647,11 +768,15 @@ src="https://via.placeholder.com/400x600/19191b/cdbb91?text=Moonlight"
 >
 
 <div class="card-title">
+
 Moonlight
+
 </div>
 
 <div class="card-status">
-Ongoing
+
+Гарч байгаа
+
 </div>
 
 </div>
@@ -666,11 +791,15 @@ src="https://via.placeholder.com/400x600/211c20/cdbb91?text=Another+Story"
 >
 
 <div class="card-title">
+
 Another Story
+
 </div>
 
 <div class="card-status">
-Completed
+
+Дууссан
+
 </div>
 
 </div>
@@ -685,11 +814,15 @@ src="https://via.placeholder.com/400x600/181d21/cdbb91?text=Unknown"
 >
 
 <div class="card-title">
+
 Unknown Tale
+
 </div>
 
 <div class="card-status">
-Upcoming
+
+Удахгүй
+
 </div>
 
 </div>
@@ -701,23 +834,34 @@ Upcoming
 
 
 
-<!-- =========================
-     LATEST CHAPTERS
-========================= -->
+<!-- ШИНЭ БҮЛГҮҮД -->
 
-<section class="section" id="latest">
+<section
+class="section"
+id="latest">
+
 
 <div class="section-header">
 
+
 <h2 class="section-title">
-Latest Chapters
+
+Шинээр гарсан бүлгүүд
+
 </h2>
 
-<a class="view-all" href="#">
-VIEW ALL →
+
+<a
+class="view-all"
+href="#">
+
+Бүгдийг харах →
+
 </a>
 
+
 </div>
+
 
 
 <div class="latest-grid">
@@ -726,11 +870,15 @@ VIEW ALL →
 <div class="chapter">
 
 <div class="chapter-title">
-Featured Manga — Chapter 12
+
+Онцлох манга — 12-р бүлэг
+
 </div>
 
 <div class="chapter-info new">
-NEW • Just released
+
+ШИНЭ • Дөнгөж гарлаа
+
 </div>
 
 </div>
@@ -740,25 +888,15 @@ NEW • Just released
 <div class="chapter">
 
 <div class="chapter-title">
-Another Story — Chapter 07
+
+Another Story — 7-р бүлэг
+
 </div>
 
 <div class="chapter-info new">
-NEW • 2 hours ago
-</div>
 
-</div>
+ШИНЭ • 2 цагийн өмнө
 
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-Moonlight — Chapter 21
-</div>
-
-<div class="chapter-info">
-Releases in 3 hours
 </div>
 
 </div>
@@ -768,11 +906,33 @@ Releases in 3 hours
 <div class="chapter">
 
 <div class="chapter-title">
-Unknown Tale — Chapter 01
+
+Moonlight — 21-р бүлэг
+
 </div>
 
 <div class="chapter-info">
-Releases tomorrow
+
+3 цагийн дараа гарна
+
+</div>
+
+</div>
+
+
+
+<div class="chapter">
+
+<div class="chapter-title">
+
+Unknown Tale — 1-р бүлэг
+
+</div>
+
+<div class="chapter-info">
+
+Маргааш гарна
+
 </div>
 
 </div>
@@ -784,19 +944,23 @@ Releases tomorrow
 
 
 
-<!-- =========================
-     STATUS
-========================= -->
+<!-- МАНГАНЫ ТӨЛӨВ -->
 
 <section class="section">
 
+
 <div class="section-header">
 
+
 <h2 class="section-title">
-Manga Status
+
+Манганы төлөв
+
 </h2>
 
+
 </div>
+
 
 
 <div class="status-grid">
@@ -804,17 +968,27 @@ Manga Status
 
 <div class="status-box">
 
+
 <div class="status-symbol">
+
 ◈
+
 </div>
 
+
 <h3>
-Ongoing
+
+Гарч байгаа
+
 </h3>
 
+
 <p>
-Stories currently receiving new chapters.
+
+Шинэ бүлгүүд нь тогтмол гарсаар байгаа манганууд.
+
 </p>
+
 
 </div>
 
@@ -822,17 +996,27 @@ Stories currently receiving new chapters.
 
 <div class="status-box">
 
+
 <div class="status-symbol">
+
 ◇
+
 </div>
 
+
 <h3>
-Completed
+
+Дууссан
+
 </h3>
 
+
 <p>
-Stories with all chapters released.
+
+Бүх бүлэг нь бүрэн гарсан манганууд.
+
 </p>
+
 
 </div>
 
@@ -840,17 +1024,27 @@ Stories with all chapters released.
 
 <div class="status-box">
 
+
 <div class="status-symbol">
+
 ✦
+
 </div>
 
+
 <h3>
-Upcoming
+
+Удахгүй гарах
+
 </h3>
 
+
 <p>
-Stories waiting for their first release.
+
+Уншигчдад хүрэхээр хүлээгдэж буй манганууд.
+
 </p>
+
 
 </div>
 
@@ -861,62 +1055,119 @@ Stories waiting for their first release.
 
 
 
-<!-- =========================
-     GENRES
-========================= -->
+<!-- ТӨРӨЛ -->
 
-<section class="section" id="genres">
+<section
+class="section"
+id="genres">
+
 
 <div class="section-header">
 
+
 <h2 class="section-title">
-Explore by Genre
+
+Төрлөөр хайх
+
 </h2>
 
+
 </div>
+
 
 
 <div class="genres">
 
-<a class="genre" href="#">
-Romance
+
+<a
+class="genre"
+href="#">
+
+Романтик
+
 </a>
 
-<a class="genre" href="#">
-Drama
+
+<a
+class="genre"
+href="#">
+
+Драма
+
 </a>
 
-<a class="genre" href="#">
-Fantasy
+
+<a
+class="genre"
+href="#">
+
+Уран зөгнөл
+
 </a>
 
-<a class="genre" href="#">
-Action
+
+<a
+class="genre"
+href="#">
+
+Адал явдалт
+
 </a>
 
-<a class="genre" href="#">
-Mystery
+
+<a
+class="genre"
+href="#">
+
+Нууцлаг
+
 </a>
 
-<a class="genre" href="#">
-Horror
+
+<a
+class="genre"
+href="#">
+
+Аймшиг
+
 </a>
 
-<a class="genre" href="#">
-Psychological
+
+<a
+class="genre"
+href="#">
+
+Сэтгэлзүй
+
 </a>
 
-<a class="genre" href="#">
-Slice of Life
+
+<a
+class="genre"
+href="#">
+
+Өдөр тутмын амьдрал
+
 </a>
 
-<a class="genre" href="#">
-Historical
+
+<a
+class="genre"
+href="#">
+
+Түүхэн
+
 </a>
 
-<a class="genre" href="#">
-Supernatural
+
+<a
+class="genre"
+href="#">
+
+Ер бусын
+
 </a>
+
 
 </div>
 
@@ -924,22 +1175,29 @@ Supernatural
 
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
-<footer id="about">
+<footer
+id="about">
+
 
 <div class="footer-logo">
+
 THE AWARY MANGA
+
 </div>
 
+
 <div class="footer-text">
-Stories beyond the pages.
+
+Хуудаснаас цааш үргэлжлэх түүхүүд.
+
 </div>
+
 
 </footer>
 
 
 </body>
+
 </html>
