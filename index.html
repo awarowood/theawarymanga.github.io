@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="mn">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,9 +9,7 @@
 
 <style>
 
-/* =========================
-   ҮНДСЭН
-========================= */
+/* ===== ҮНДСЭН ===== */
 
 * {
     margin: 0;
@@ -24,46 +22,25 @@ html {
 }
 
 body {
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(21, 0, 126, 0.16),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 85% 70%,
-            rgba(101, 7, 11, 0.14),
-            transparent 30%
-        ),
-        #0A132D;
-
-    color: #e8ebef;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    min-height: 100vh;
+    background: #0A132D;
+    color: #eef2f5;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* ===== HEADER ===== */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
 
-    background: rgba(10,19,45,0.94);
+    background: rgba(10,19,45,0.95);
+    backdrop-filter: blur(15px);
 
-    backdrop-filter: blur(18px);
+    border-bottom: 1px solid #52626E;
 
-    border-bottom: 1px solid rgba(82,98,110,0.35);
-
-    padding: 18px 5%;
+    padding: 17px 5%;
 }
 
 .header-inner {
@@ -71,33 +48,24 @@ header {
     margin: auto;
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
-    gap: 30px;
+    gap: 25px;
 }
 
 .logo {
-    color: #ffffff;
-
-    font-size: 20px;
-
+    color: white;
+    font-size: 17px;
     font-weight: 900;
-
     letter-spacing: 3px;
-
     white-space: nowrap;
 }
 
 nav {
     display: flex;
-
-    gap: 22px;
-
+    gap: 20px;
     overflow-x: auto;
-
     scrollbar-width: none;
 }
 
@@ -106,117 +74,100 @@ nav::-webkit-scrollbar {
 }
 
 nav a {
-    color: #aeb8c3;
-
+    color: #9eabb7;
     text-decoration: none;
-
     font-size: 13px;
-
     font-weight: 700;
-
     white-space: nowrap;
-
-    transition: 0.25s;
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: white;
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* ===== HERO ===== */
 
 .hero {
-    min-height: 70vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 80px 20px;
+    min-height: 72vh;
 
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
 
     overflow: hidden;
 
     background:
         linear-gradient(
-            135deg,
-            rgba(21,0,126,0.24),
-            transparent 45%,
-            rgba(101,7,11,0.18)
-        );
+            rgba(10,19,45,0.52),
+            rgba(10,19,45,0.88)
+        ),
+        url("IMG_0974.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 70px 20px;
 }
 
-.hero::before {
-    content: "漫画";
+.hero::after {
+    content: "";
 
     position: absolute;
+    inset: 0;
 
-    right: -20px;
-    top: 30px;
-
-    font-size: clamp(120px,25vw,280px);
-
-    font-weight: 900;
-
-    color: rgba(255,255,255,0.025);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(21,0,126,0.20),
+            transparent 50%,
+            rgba(101,7,11,0.18)
+        );
 
     pointer-events: none;
 }
 
 .hero-content {
     position: relative;
-
     z-index: 2;
-
-    max-width: 850px;
-}
-
-.small-title {
-    color: #52626E;
-
-    font-size: 12px;
-
-    font-weight: 800;
-
-    letter-spacing: 5px;
-
-    margin-bottom: 22px;
 }
 
 .hero h1 {
-    color: #ffffff;
+    color: white;
 
-    font-size: clamp(45px,9vw,90px);
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(48px, 9vw, 92px);
 
     font-weight: 900;
 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 
-    line-height: 1;
+    text-shadow:
+        0 5px 30px rgba(0,0,0,0.9);
 }
 
 .hero p {
-    margin-top: 25px;
+    margin-top: 22px;
 
-    color: #aeb8c3;
+    color: #c4cdd5;
 
     font-size: 15px;
 
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 .hero-button {
     display: inline-block;
 
-    margin-top: 35px;
+    margin-top: 32px;
 
     padding: 14px 30px;
 
@@ -228,62 +179,42 @@ nav a:hover {
 
     text-decoration: none;
 
+    border-radius: 5px;
+
     font-size: 13px;
 
-    font-weight: 800;
-
-    letter-spacing: 1px;
-
-    border-radius: 5px;
+    font-weight: 900;
 
     transition: 0.3s;
 }
 
 .hero-button:hover {
     background: #65070B;
-
     border-color: #65070B;
 }
 
 
-/* =========================
-   SECTION
-========================= */
+/* ===== SECTION ===== */
 
 .section {
     width: 90%;
-
     max-width: 1250px;
 
-    margin: 85px auto;
+    margin: 80px auto;
 }
 
 .section-title {
-    color: #ffffff;
+    color: white;
 
     font-size: 28px;
 
     font-weight: 900;
 
-    letter-spacing: -0.5px;
-
-    margin-bottom: 28px;
-}
-
-.section-subtitle {
-    color: #7f8c98;
-
-    font-size: 13px;
-
-    margin-top: -18px;
-
     margin-bottom: 28px;
 }
 
 
-/* =========================
-   ОНЦЛОХ
-========================= */
+/* ===== FEATURED ===== */
 
 .featured-row {
     display: flex;
@@ -292,13 +223,11 @@ nav a:hover {
 
     overflow-x: auto;
 
-    padding-bottom: 18px;
+    padding-bottom: 15px;
 
     scroll-snap-type: x mandatory;
 
     scrollbar-width: thin;
-
-    scrollbar-color: #52626E transparent;
 }
 
 .featured-card {
@@ -309,7 +238,6 @@ nav a:hover {
 
 .featured-card img {
     width: 210px;
-
     height: 310px;
 
     object-fit: cover;
@@ -318,16 +246,16 @@ nav a:hover {
 
     border-radius: 8px;
 
-    border: 1px solid rgba(82,98,110,0.45);
+    border: 1px solid #52626E;
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,0.35);
+        0 15px 40px rgba(0,0,0,0.4);
 }
 
 .featured-card h3 {
     margin-top: 13px;
 
-    color: #ffffff;
+    color: white;
 
     font-size: 16px;
 
@@ -337,7 +265,7 @@ nav a:hover {
 .featured-card p {
     margin-top: 6px;
 
-    color: #52626E;
+    color: #aeb9c3;
 
     font-size: 12px;
 
@@ -345,109 +273,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   МАНГАНЫ МЭДЭЭЛЭЛ
-========================= */
-
-.manga-intro {
-    display: grid;
-
-    grid-template-columns: 250px 1fr;
-
-    gap: 35px;
-
-    padding: 25px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(21,0,126,0.16),
-            rgba(10,19,45,0.7)
-        );
-
-    border: 1px solid rgba(82,98,110,0.3);
-
-    border-radius: 10px;
-}
-
-.manga-intro img {
-    width: 100%;
-
-    height: 360px;
-
-    object-fit: cover;
-
-    border-radius: 7px;
-}
-
-.manga-intro h3 {
-    font-size: 30px;
-
-    font-weight: 900;
-
-    color: #ffffff;
-
-    margin-bottom: 15px;
-}
-
-.manga-description {
-    color: #aeb8c3;
-
-    font-size: 14px;
-
-    line-height: 1.8;
-
-    margin-bottom: 20px;
-}
-
-.tags {
-    display: flex;
-
-    gap: 8px;
-
-    flex-wrap: wrap;
-}
-
-.tag {
-    padding: 7px 11px;
-
-    background: rgba(82,98,110,0.15);
-
-    border: 1px solid rgba(82,98,110,0.35);
-
-    border-radius: 4px;
-
-    color: #c5ced7;
-
-    font-size: 11px;
-
-    font-weight: 700;
-}
-
-.status {
-    display: inline-block;
-
-    margin-top: 18px;
-
-    padding: 8px 12px;
-
-    background: rgba(101,7,11,0.35);
-
-    border: 1px solid rgba(101,7,11,0.7);
-
-    border-radius: 4px;
-
-    color: #e5a7aa;
-
-    font-size: 11px;
-
-    font-weight: 800;
-}
-
-
-/* =========================
-   ХАЙЛТ
-========================= */
+/* ===== SEARCH ===== */
 
 .search {
     width: 100%;
@@ -456,11 +282,11 @@ nav a:hover {
 
     background: #081024;
 
-    border: 1px solid rgba(82,98,110,0.45);
+    border: 1px solid #52626E;
 
     border-radius: 6px;
 
-    color: #ffffff;
+    color: white;
 
     font-size: 14px;
 
@@ -470,27 +296,22 @@ nav a:hover {
 }
 
 .search::placeholder {
-    color: #657381;
+    color: #687784;
 }
 
 .search:focus {
     border-color: #15007E;
-
-    box-shadow:
-        0 0 0 2px rgba(21,0,126,0.15);
 }
 
 
-/* =========================
-   ТӨРӨЛ
-========================= */
+/* ===== GENRES ===== */
 
 .genre-buttons {
     display: flex;
 
-    gap: 9px;
-
     flex-wrap: wrap;
+
+    gap: 9px;
 
     margin-bottom: 32px;
 }
@@ -500,7 +321,7 @@ nav a:hover {
 
     background: transparent;
 
-    border: 1px solid rgba(82,98,110,0.4);
+    border: 1px solid #52626E;
 
     color: #9eabb7;
 
@@ -518,23 +339,20 @@ nav a:hover {
 }
 
 .genre:hover {
+    color: white;
     border-color: #15007E;
-
-    color: #ffffff;
 }
 
 .genre.active {
     background: #15007E;
 
-    border-color: #15007E;
+    color: white;
 
-    color: #ffffff;
+    border-color: #15007E;
 }
 
 
-/* =========================
-   МАНГАНЫ КАРТ
-========================= */
+/* ===== MANGA GRID ===== */
 
 .manga-grid {
     display: grid;
@@ -551,24 +369,19 @@ nav a:hover {
 .manga-card {
     background: #081024;
 
-    border: 1px solid rgba(82,98,110,0.28);
+    border: 1px solid rgba(82,98,110,0.35);
 
     border-radius: 8px;
 
     overflow: hidden;
 
     transition: 0.3s;
-
-    cursor: pointer;
 }
 
 .manga-card:hover {
     transform: translateY(-6px);
 
     border-color: #15007E;
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,0.3);
 }
 
 .manga-cover {
@@ -586,7 +399,7 @@ nav a:hover {
 }
 
 .manga-title {
-    color: #ffffff;
+    color: white;
 
     font-size: 17px;
 
@@ -602,28 +415,24 @@ nav a:hover {
 }
 
 .manga-status {
-    margin-top: 10px;
+    color: #aeb9c3;
 
     font-size: 11px;
 
     font-weight: 800;
+
+    margin-top: 10px;
 }
 
-.completed {
-    color: #c7d0d8;
-}
 
-
-/* =========================
-   БҮЛЭГ ГАРААГҮЙ
-========================= */
+/* ===== CHAPTER ===== */
 
 .empty-state {
     padding: 45px 25px;
 
     background: #081024;
 
-    border: 1px solid rgba(82,98,110,0.3);
+    border: 1px solid rgba(82,98,110,0.35);
 
     border-radius: 8px;
 
@@ -633,7 +442,7 @@ nav a:hover {
 .empty-state strong {
     display: block;
 
-    color: #ffffff;
+    color: white;
 
     font-size: 17px;
 
@@ -651,9 +460,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* ===== FOOTER ===== */
 
 footer {
     margin-top: 110px;
@@ -662,13 +469,13 @@ footer {
 
     text-align: center;
 
-    border-top: 1px solid rgba(82,98,110,0.25);
+    border-top: 1px solid rgba(82,98,110,0.3);
 
     color: #64727f;
 }
 
 .footer-logo {
-    color: #ffffff;
+    color: white;
 
     font-size: 18px;
 
@@ -680,15 +487,12 @@ footer {
 }
 
 
-/* =========================
-   УТАС
-========================= */
+/* ===== MOBILE ===== */
 
 @media(max-width:700px) {
 
     .header-inner {
         flex-direction: column;
-
         align-items: flex-start;
     }
 
@@ -698,8 +502,6 @@ footer {
 
     .hero {
         min-height: 65vh;
-
-        padding: 70px 18px;
     }
 
     .hero h1 {
@@ -708,12 +510,7 @@ footer {
 
     .section {
         width: 90%;
-
         margin: 60px auto;
-    }
-
-    .section-title {
-        font-size: 24px;
     }
 
     .featured-card {
@@ -722,7 +519,6 @@ footer {
 
     .featured-card img {
         width: 165px;
-
         height: 250px;
     }
 
@@ -736,36 +532,17 @@ footer {
     .manga-cover {
         height: 225px;
     }
-
-    .manga-intro {
-        grid-template-columns: 1fr;
-
-        gap: 22px;
-    }
-
-    .manga-intro img {
-        max-width: 250px;
-
-        margin: auto;
-
-        height: 360px;
-    }
-
-    .manga-intro h3 {
-        font-size: 25px;
-    }
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -794,28 +571,28 @@ THE AWARY MANGA
 </header>
 
 
-<!-- =========================
-     HOME
-========================= -->
+<!-- HOME -->
 
-<section class="hero" id="home">
+<section
+class="hero"
+id="home">
 
 <div class="hero-content">
 
-<div class="small-title">
-MANGA ARCHIVE • МАНГАНЫ ӨРГӨӨ
-</div>
-
 <h1>
-THE AWARY
+𝐓𝐇𝐄 𝐀𝐖𝐀𝐑𝐘
 </h1>
 
 <p>
 Хуудаснаас цааш үргэлжлэх түүхүүд.
 </p>
 
-<a href="#library" class="hero-button">
+<a
+href="#library"
+class="hero-button">
+
 МАНГАНЫ САН
+
 </a>
 
 </div>
@@ -823,17 +600,18 @@ THE AWARY
 </section>
 
 
-<!-- =========================
-     FEATURED
-========================= -->
+<!-- FEATURED -->
 
-<section class="section" id="featured">
+<section
+class="section"
+id="featured">
 
 <h2 class="section-title">
 Онцлох манга
 </h2>
 
 <div class="featured-row">
+
 
 <div class="featured-card">
 
@@ -847,79 +625,26 @@ alt="Дахин гэрэл өөд"
 </h3>
 
 <p>
-● Дууссан
+Удахгүй
 </p>
 
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- =========================
-     MANGA INFORMATION
-========================= -->
+<!-- MANGA LIBRARY -->
 
-<section class="section">
-
-<h2 class="section-title">
-Дахин гэрэл өөд
-</h2>
-
-<div class="manga-intro">
-
-<img
-src="photo-output.png"
-alt="Дахин гэрэл өөд"
->
-
-<div>
-
-<h3>
-Дахин гэрэл өөд
-</h3>
-
-<p class="manga-description">
-Харанхуйгаас гэрэл рүү дахин алхах хувь тавилангийн тухай түүх.
-</p>
-
-<div class="tags">
-
-<span class="tag">
-Уран зөгнөл
-</span>
-
-<span class="tag">
-Дахин төрөлт
-</span>
-
-</div>
-
-<div class="status">
-● Дууссан
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     MANGA LIBRARY
-========================= -->
-
-<section class="section" id="library">
+<section
+class="section"
+id="library">
 
 <h2 class="section-title">
 Манганы сан
 </h2>
-
-<p class="section-subtitle">
-Манганы нэр эсвэл төрлөөр хайж үзээрэй.
-</p>
 
 
 <input
@@ -947,7 +672,6 @@ class="genre"
 data-genre="fantasy">
 
 Уран зөгнөл
-
 </button>
 
 <button
@@ -955,7 +679,6 @@ class="genre"
 data-genre="reincarnation">
 
 Дахин төрөлт
-
 </button>
 
 </div>
@@ -964,6 +687,7 @@ data-genre="reincarnation">
 <div
 class="manga-grid"
 id="mangaGrid">
+
 
 <div
 class="manga-card"
@@ -986,29 +710,28 @@ alt="Дахин гэрэл өөд"
 Уран зөгнөл • Дахин төрөлт
 </div>
 
-<div class="manga-status completed">
-● Дууссан
+<div class="manga-status">
+● Удахгүй
 </div>
 
 </div>
 
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- =========================
-     CHAPTERS
-========================= -->
+<!-- CHAPTERS -->
 
 <section
 class="section"
 id="chapters">
 
 <h2 class="section-title">
-Бүлгүүд
+Шинэ бүлгүүд
 </h2>
 
 <div class="empty-state">
@@ -1018,8 +741,8 @@ id="chapters">
 </strong>
 
 <p>
-Дахин гэрэл өөд манганы бүлгүүд энд гарах болно.
-Шинэ бүлэг нэмэгдсэн үед энэ хэсгээс харах боломжтой.
+Дахин гэрэл өөд манганы бүлгүүд
+гарч эхлэх үед энд харагдана.
 </p>
 
 </div>
@@ -1027,9 +750,7 @@ id="chapters">
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1047,10 +768,6 @@ THE AWARY MANGA
 
 </footer>
 
-
-<!-- =========================
-     SEARCH + FILTER
-========================= -->
 
 <script>
 
@@ -1095,18 +812,11 @@ function filterManga() {
             genres.includes(selectedGenre);
 
 
-        if (
+        card.style.display =
             matchesSearch &&
             matchesGenre
-        ) {
-
-            card.style.display = "";
-
-        } else {
-
-            card.style.display = "none";
-
-        }
+            ? ""
+            : "none";
 
     });
 
@@ -1126,22 +836,13 @@ genreButtons.forEach(button => {
         () => {
 
             genreButtons.forEach(btn => {
-
-                btn.classList.remove(
-                    "active"
-                );
-
+                btn.classList.remove("active");
             });
 
-
-            button.classList.add(
-                "active"
-            );
-
+            button.classList.add("active");
 
             selectedGenre =
                 button.dataset.genre;
-
 
             filterManga();
 
