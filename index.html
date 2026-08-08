@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,316 +9,937 @@
 
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: #0b0b0d;
+    background: #080809;
     color: #eee;
     font-family: Georgia, "Times New Roman", serif;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 header {
-    padding: 24px 7%;
-    border-bottom: 1px solid #292929;
-    background: #0b0b0d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(8, 8, 9, 0.94);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #2b2925;
+
+    padding: 20px 7%;
+}
+
+.header-inner {
+    max-width: 1300px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
 }
 
 .logo {
-    font-size: 25px;
+    color: #cdbb91;
+
+    font-size: 23px;
     letter-spacing: 4px;
-    color: #d6c39a;
+
+    white-space: nowrap;
 }
 
 nav {
-    margin-top: 18px;
     display: flex;
     gap: 25px;
-    flex-wrap: wrap;
 }
 
 nav a {
     color: #aaa;
     text-decoration: none;
-    font-size: 14px;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #d6c39a;
+    color: #d5c39b;
 }
 
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
-    padding: 90px 7%;
+    min-height: 75vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
+
+    padding: 80px 20px;
+
     background:
-        radial-gradient(circle at center, #242020 0%, #0b0b0d 65%);
+        radial-gradient(
+            circle at center,
+            rgba(96, 72, 47, 0.25),
+            transparent 45%
+        ),
+        linear-gradient(
+            180deg,
+            #0d0c0d,
+            #080809
+        );
+
+    position: relative;
+}
+
+.hero::before {
+    content: "和";
+
+    position: absolute;
+
+    font-size: 260px;
+
+    color: rgba(205, 187, 145, 0.025);
+
+    font-family: serif;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.small-title {
+    color: #a79878;
+
+    letter-spacing: 6px;
+    font-size: 12px;
+
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: clamp(38px, 7vw, 75px);
-    letter-spacing: 7px;
-    color: #d6c39a;
+    font-size: clamp(42px, 8vw, 85px);
+
+    letter-spacing: 8px;
+
+    color: #d6c59d;
+
+    text-shadow:
+        0 0 30px rgba(214, 197, 157, 0.08);
 }
 
 .hero p {
-    margin-top: 18px;
-    color: #999;
-    font-size: 16px;
+    margin-top: 20px;
+
+    color: #888;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
 }
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 13px 28px;
+
+    border: 1px solid #6d624c;
+
+    color: #d6c59d;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #d6c59d;
+    color: #080809;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
     width: 86%;
-    max-width: 1250px;
-    margin: 55px auto;
+    max-width: 1300px;
+
+    margin: 90px auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
 }
 
 .section-title {
+    color: #d6c59d;
+
     font-size: 25px;
-    margin-bottom: 25px;
-    color: #d6c39a;
+
+    letter-spacing: 2px;
 }
+
+.view-all {
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   FEATURED
+========================= */
 
 .manga-row {
     display: flex;
-    gap: 18px;
+
+    gap: 22px;
+
     overflow-x: auto;
+
     padding-bottom: 15px;
+
     scroll-snap-type: x mandatory;
+
+    scrollbar-width: thin;
 }
 
 .manga-row::-webkit-scrollbar {
-    height: 5px;
+    height: 4px;
 }
 
 .manga-row::-webkit-scrollbar-thumb {
-    background: #4b4435;
+    background: #5d513d;
 }
 
 .card {
-    min-width: 160px;
-    width: 160px;
+    min-width: 190px;
+
     scroll-snap-align: start;
+
+    transition: 0.35s;
 }
 
-.card img {
-    width: 100%;
-    height: 235px;
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.cover {
+    width: 190px;
+    height: 285px;
+
+    border-radius: 5px;
+
     object-fit: cover;
-    border-radius: 6px;
-    background: #19191c;
+
+    background:
+        linear-gradient(
+            135deg,
+            #29231e,
+            #111
+        );
+
+    border: 1px solid #302d27;
 }
 
-.card h3 {
-    margin-top: 10px;
-    font-size: 15px;
+.card-title {
+    margin-top: 12px;
+
+    color: #eee;
+
+    font-size: 16px;
 }
 
-.status {
-    color: #999;
-    font-size: 12px;
+.card-status {
     margin-top: 5px;
+
+    color: #8d856f;
+
+    font-size: 12px;
 }
 
-.latest {
+
+/* =========================
+   LATEST
+========================= */
+
+.latest-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
     gap: 15px;
 }
 
 .chapter {
-    background: #141416;
-    border: 1px solid #29292c;
-    padding: 18px;
-    border-radius: 7px;
+    padding: 22px;
+
+    background: #111113;
+
+    border: 1px solid #28272a;
+
+    border-left: 2px solid #75664b;
+
+    transition: 0.3s;
 }
 
-.chapter h3 {
+.chapter:hover {
+    background: #151416;
+    transform: translateX(4px);
+}
+
+.chapter-title {
     font-size: 16px;
 }
 
-.chapter p {
-    color: #888;
-    margin-top: 7px;
-    font-size: 13px;
+.chapter-info {
+    margin-top: 8px;
+
+    color: #777;
+
+    font-size: 12px;
 }
 
 .new {
-    color: #d6c39a;
+    color: #cdbb91;
 }
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 18px;
+}
+
+.status-box {
+    padding: 28px;
+
+    background: #101012;
+
+    border: 1px solid #29272a;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.status-box:hover {
+    border-color: #625641;
+}
+
+.status-symbol {
+    font-size: 28px;
+
+    color: #bba982;
+
+    margin-bottom: 15px;
+}
+
+.status-box h3 {
+    color: #ddd;
+
+    font-size: 18px;
+}
+
+.status-box p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-top: 8px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   GENRES
+========================= */
+
+.genres {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.genre {
+    padding: 10px 18px;
+
+    border: 1px solid #302d28;
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.genre:hover {
+    color: #d6c59d;
+
+    border-color: #75664b;
+
+    background: #151311;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    margin-top: 80px;
-    padding: 40px;
+    margin-top: 120px;
+
+    padding: 50px 20px;
+
     text-align: center;
-    border-top: 1px solid #292929;
+
+    border-top: 1px solid #272529;
+
     color: #666;
-    font-size: 13px;
 }
 
-@media (max-width: 600px) {
+.footer-logo {
+    color: #b8a77f;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+.footer-text {
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
 
     header {
-        padding: 20px;
+        padding: 18px 5%;
     }
 
-    nav {
+    .header-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
         gap: 15px;
     }
 
+    nav {
+        width: 100%;
+
+        overflow-x: auto;
+
+        gap: 20px;
+
+        padding-bottom: 5px;
+    }
+
+    nav a {
+        white-space: nowrap;
+    }
+
     .hero {
-        padding: 70px 20px;
+        min-height: 70vh;
+    }
+
+    .hero h1 {
+        letter-spacing: 5px;
     }
 
     .section {
         width: 90%;
+
+        margin: 65px auto;
     }
 
     .card {
-        min-width: 135px;
-        width: 135px;
+        min-width: 145px;
     }
 
-    .card img {
-        height: 200px;
+    .cover {
+        width: 145px;
+
+        height: 220px;
     }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-    <div class="logo">
-        THE AWARY MANGA
-    </div>
+<div class="header-inner">
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Manga</a>
-        <a href="#">Genres</a>
-        <a href="#">Latest</a>
-        <a href="#">Popular</a>
-        <a href="#">About</a>
-    </nav>
+<div class="logo">
+THE AWARY
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#manga">Manga</a>
+
+<a href="#genres">Genres</a>
+
+<a href="#latest">Latest</a>
+
+<a href="#popular">Popular</a>
+
+<a href="#about">About</a>
+
+</nav>
+
+</div>
 
 </header>
 
 
-<section class="hero">
 
-    <h1>THE AWARY MANGA</h1>
+<!-- =========================
+     HERO
+========================= -->
 
-    <p>
-        Stories beyond the pages.
-    </p>
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="small-title">
+THE MANGA ARCHIVE
+</div>
+
+<h1>
+THE AWARY
+</h1>
+
+<p>
+Stories beyond the pages.
+</p>
+
+<a class="hero-button" href="#manga">
+EXPLORE MANGA
+</a>
+
+</div>
 
 </section>
 
+
+
+<!-- =========================
+     FEATURED MANGA
+========================= -->
+
+<section class="section" id="manga">
+
+<div class="section-header">
+
+<h2 class="section-title">
+Featured Manga
+</h2>
+
+<a class="view-all" href="#">
+VIEW ALL →
+</a>
+
+</div>
+
+
+<div class="manga-row">
+
+
+<div class="card">
+
+<img
+class="cover"
+src="https://via.placeholder.com/400x600/211d19/cdbb91?text=Awary"
+>
+
+<div class="card-title">
+Featured Manga
+</div>
+
+<div class="card-status">
+Ongoing
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img
+class="cover"
+src="https://via.placeholder.com/400x600/19191b/cdbb91?text=Moonlight"
+>
+
+<div class="card-title">
+Moonlight
+</div>
+
+<div class="card-status">
+Ongoing
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img
+class="cover"
+src="https://via.placeholder.com/400x600/211c20/cdbb91?text=Another+Story"
+>
+
+<div class="card-title">
+Another Story
+</div>
+
+<div class="card-status">
+Completed
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img
+class="cover"
+src="https://via.placeholder.com/400x600/181d21/cdbb91?text=Unknown"
+>
+
+<div class="card-title">
+Unknown Tale
+</div>
+
+<div class="card-status">
+Upcoming
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     LATEST CHAPTERS
+========================= -->
+
+<section class="section" id="latest">
+
+<div class="section-header">
+
+<h2 class="section-title">
+Latest Chapters
+</h2>
+
+<a class="view-all" href="#">
+VIEW ALL →
+</a>
+
+</div>
+
+
+<div class="latest-grid">
+
+
+<div class="chapter">
+
+<div class="chapter-title">
+Featured Manga — Chapter 12
+</div>
+
+<div class="chapter-info new">
+NEW • Just released
+</div>
+
+</div>
+
+
+
+<div class="chapter">
+
+<div class="chapter-title">
+Another Story — Chapter 07
+</div>
+
+<div class="chapter-info new">
+NEW • 2 hours ago
+</div>
+
+</div>
+
+
+
+<div class="chapter">
+
+<div class="chapter-title">
+Moonlight — Chapter 21
+</div>
+
+<div class="chapter-info">
+Releases in 3 hours
+</div>
+
+</div>
+
+
+
+<div class="chapter">
+
+<div class="chapter-title">
+Unknown Tale — Chapter 01
+</div>
+
+<div class="chapter-info">
+Releases tomorrow
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     STATUS
+========================= -->
 
 <section class="section">
 
-    <h2 class="section-title">
-        Featured Manga
-    </h2>
+<div class="section-header">
 
-    <div class="manga-row">
+<h2 class="section-title">
+Manga Status
+</h2>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x450">
-            <h3>Featured Manga</h3>
-            <p class="status">Ongoing</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x450">
-            <h3>Another Story</h3>
-            <p class="status">Completed</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x450">
-            <h3>Moonlight</h3>
-            <p class="status">Ongoing</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x450">
-            <h3>Unknown Tale</h3>
-            <p class="status">Upcoming</p>
-        </div>
-
-    </div>
-
-</section>
+</div>
 
 
-<section class="section">
-
-    <h2 class="section-title">
-        Latest Chapters
-    </h2>
-
-    <div class="latest">
-
-        <div class="chapter">
-            <h3>Featured Manga — Chapter 12</h3>
-            <p class="new">NEW • Just released</p>
-        </div>
-
-        <div class="chapter">
-            <h3>Another Story — Chapter 07</h3>
-            <p class="new">NEW • 2 hours ago</p>
-        </div>
-
-        <div class="chapter">
-            <h3>Moonlight — Chapter 21</h3>
-            <p>Releases in 3 hours</p>
-        </div>
-
-    </div>
-
-</section>
+<div class="status-grid">
 
 
-<section class="section">
+<div class="status-box">
 
-    <h2 class="section-title">
-        Manga Status
-    </h2>
+<div class="status-symbol">
+◈
+</div>
 
-    <div class="latest">
+<h3>
+Ongoing
+</h3>
 
-        <div class="chapter">
-            <h3>Ongoing</h3>
-            <p>Manga currently being released.</p>
-        </div>
+<p>
+Stories currently receiving new chapters.
+</p>
 
-        <div class="chapter">
-            <h3>Completed</h3>
-            <p>All chapters have been released.</p>
-        </div>
+</div>
 
-        <div class="chapter">
-            <h3>Upcoming</h3>
-            <p>Coming soon.</p>
-        </div>
 
-    </div>
+
+<div class="status-box">
+
+<div class="status-symbol">
+◇
+</div>
+
+<h3>
+Completed
+</h3>
+
+<p>
+Stories with all chapters released.
+</p>
+
+</div>
+
+
+
+<div class="status-box">
+
+<div class="status-symbol">
+✦
+</div>
+
+<h3>
+Upcoming
+</h3>
+
+<p>
+Stories waiting for their first release.
+</p>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<footer>
 
-    © 2026 The Awary Manga
+<!-- =========================
+     GENRES
+========================= -->
+
+<section class="section" id="genres">
+
+<div class="section-header">
+
+<h2 class="section-title">
+Explore by Genre
+</h2>
+
+</div>
+
+
+<div class="genres">
+
+<a class="genre" href="#">
+Romance
+</a>
+
+<a class="genre" href="#">
+Drama
+</a>
+
+<a class="genre" href="#">
+Fantasy
+</a>
+
+<a class="genre" href="#">
+Action
+</a>
+
+<a class="genre" href="#">
+Mystery
+</a>
+
+<a class="genre" href="#">
+Horror
+</a>
+
+<a class="genre" href="#">
+Psychological
+</a>
+
+<a class="genre" href="#">
+Slice of Life
+</a>
+
+<a class="genre" href="#">
+Historical
+</a>
+
+<a class="genre" href="#">
+Supernatural
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer id="about">
+
+<div class="footer-logo">
+THE AWARY MANGA
+</div>
+
+<div class="footer-text">
+Stories beyond the pages.
+</div>
 
 </footer>
+
 
 </body>
 </html>
