@@ -9,8 +9,6 @@
 
 <style>
 
-/* ===== ҮНДСЭН ===== */
-
 * {
     margin: 0;
     padding: 0;
@@ -149,7 +147,6 @@ nav a:hover {
     font-weight: 900;
 
     letter-spacing: 1px;
-
 }
 
 .hero p {
@@ -402,6 +399,8 @@ nav a:hover {
     font-size: 17px;
 
     font-weight: 900;
+
+    line-height: 1.4;
 }
 
 .manga-genres {
@@ -536,11 +535,10 @@ footer {
 
 </head>
 
-
 <body>
 
 
-<!-- HEADER -->
+<!-- ===== HEADER ===== -->
 
 <header>
 
@@ -553,13 +551,9 @@ THE AWARY MANGA
 <nav>
 
 <a href="#home">Нүүр</a>
-
 <a href="#featured">Онцлох</a>
-
 <a href="#library">Манга</a>
-
 <a href="#genres">Төрөл</a>
-
 <a href="#chapters">Бүлгүүд</a>
 
 </nav>
@@ -569,11 +563,9 @@ THE AWARY MANGA
 </header>
 
 
-<!-- HOME -->
+<!-- ===== HOME ===== -->
 
-<section
-class="hero"
-id="home">
+<section class="hero" id="home">
 
 <div class="hero-content">
 
@@ -598,7 +590,7 @@ class="hero-button">
 </section>
 
 
-<!-- FEATURED -->
+<!-- ===== FEATURED ===== -->
 
 <section
 class="section"
@@ -611,10 +603,12 @@ id="featured">
 <div class="featured-row">
 
 
+<!-- ДАХИН ГЭРЭЛ ӨӨД -->
+
 <div class="featured-card">
 
 <img
-src="photo-output.png"
+src="90FB049D-B0DF-4E4B-99E4-300843B5911A.png"
 alt="Дахин гэрэл өөд"
 >
 
@@ -629,12 +623,32 @@ alt="Дахин гэрэл өөд"
 </div>
 
 
+<!-- НАМАЙГ ҮЗЭН ЯДДАГ НӨХӨР -->
+
+<div class="featured-card">
+
+<img
+src="IMG_0991.jpeg"
+alt="Намайг үзэн яддаг нөхөр маань ой санамжаа алдчихлаа"
+>
+
+<h3>
+Намайг үзэн яддаг нөхөр маань ой санамжаа алдчихлаа
+</h3>
+
+<p>
+Удахгүй
+</p>
+
+</div>
+
+
 </div>
 
 </section>
 
 
-<!-- MANGA LIBRARY -->
+<!-- ===== MANGA LIBRARY ===== -->
 
 <section
 class="section"
@@ -653,6 +667,8 @@ placeholder="🔍 Манганы нэрээр хайх..."
 >
 
 
+<!-- ===== GENRES ===== -->
+
 <div
 class="genre-buttons"
 id="genres">
@@ -667,9 +683,18 @@ data-genre="all">
 
 <button
 class="genre"
+data-genre="drama">
+
+Драма
+
+</button>
+
+<button
+class="genre"
 data-genre="fantasy">
 
 Уран зөгнөл
+
 </button>
 
 <button
@@ -677,15 +702,52 @@ class="genre"
 data-genre="reincarnation">
 
 Дахин төрөлт
+
 </button>
 
 </div>
 
 
+<!-- ===== MANGA GRID ===== -->
+
 <div
 class="manga-grid"
 id="mangaGrid">
 
+
+<!-- 1. НАМАЙГ ҮЗЭН ЯДДАГ НӨХӨР -->
+
+<div
+class="manga-card"
+data-title="Намайг үзэн яддаг нөхөр маань ой санамжаа алдчихлаа"
+data-genres="drama">
+
+<img
+class="manga-cover"
+src="IMG_0991.jpeg"
+alt="Намайг үзэн яддаг нөхөр маань ой санамжаа алдчихлаа"
+>
+
+<div class="manga-info">
+
+<div class="manga-title">
+Намайг үзэн яддаг нөхөр маань ой санамжаа алдчихлаа
+</div>
+
+<div class="manga-genres">
+Драма
+</div>
+
+<div class="manga-status">
+● Удахгүй
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 2. ДАХИН ГЭРЭЛ ӨӨД -->
 
 <div
 class="manga-card"
@@ -694,7 +756,7 @@ data-genres="fantasy reincarnation">
 
 <img
 class="manga-cover"
-src="photo-output.png"
+src="90FB049D-B0DF-4E4B-99E4-300843B5911A.png"
 alt="Дахин гэрэл өөд"
 >
 
@@ -722,7 +784,7 @@ alt="Дахин гэрэл өөд"
 </section>
 
 
-<!-- CHAPTERS -->
+<!-- ===== CHAPTERS ===== -->
 
 <section
 class="section"
@@ -739,7 +801,7 @@ id="chapters">
 </strong>
 
 <p>
-Дахин гэрэл өөд манганы бүлгүүд
+Мангануудын бүлгүүд
 гарч эхлэх үед энд харагдана.
 </p>
 
@@ -748,7 +810,7 @@ id="chapters">
 </section>
 
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 
 <footer>
 
@@ -766,6 +828,8 @@ THE AWARY MANGA
 
 </footer>
 
+
+<!-- ===== SEARCH + FILTER ===== -->
 
 <script>
 
