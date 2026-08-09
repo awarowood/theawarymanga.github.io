@@ -9,8 +9,6 @@
 
 <style>
 
-/* ===== ҮНДСЭН ===== */
-
 * {
     margin: 0;
     padding: 0;
@@ -103,10 +101,10 @@ nav a:hover {
 
     background:
         linear-gradient(
-            rgba(10,19,45,0.52),
-            rgba(10,19,45,0.88)
+            rgba(10,19,45,0.48),
+            rgba(10,19,45,0.86)
         ),
-        url("IMG_0974.jpeg");
+        url("IMG_0993.jpeg");
 
     background-size: cover;
     background-position: center;
@@ -123,9 +121,9 @@ nav a:hover {
     background:
         linear-gradient(
             135deg,
-            rgba(21,0,126,0.20),
+            rgba(21,0,126,0.18),
             transparent 50%,
-            rgba(101,7,11,0.18)
+            rgba(101,7,11,0.15)
         );
 
     pointer-events: none;
@@ -144,27 +142,20 @@ nav a:hover {
 /* ===== THE AWARY ===== */
 
 .hero h1 {
+    color: white;
 
     font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+        Arial,
+        Helvetica,
+        sans-serif;
 
-    font-size: clamp(52px, 10vw, 100px);
+    font-size: clamp(45px, 9vw, 90px);
 
-    font-weight: 500;
+    font-weight: 800;
 
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 
     line-height: 1;
-}
-
-.hero h1 .the {
-    color: #5266A8;
-}
-
-.hero h1 .awary {
-    color: white;
 }
 
 
@@ -173,7 +164,7 @@ nav a:hover {
 .hero-button {
     display: inline-block;
 
-    margin-top: 38px;
+    margin-top: 40px;
 
     padding: 14px 30px;
 
@@ -513,7 +504,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 50px;
+        font-size: 45px;
         letter-spacing: 2px;
     }
 
@@ -564,25 +555,15 @@ THE AWARY MANGA
 
 <nav>
 
-<a href="#home">
-Нүүр
-</a>
+<a href="#home">Нүүр</a>
 
-<a href="#featured">
-Онцлох манга
-</a>
+<a href="#featured">Онцлох манга</a>
 
-<a href="#library">
-Бүх манга
-</a>
+<a href="#library">Бүх манга</a>
 
-<a href="#genres">
-Төрөл
-</a>
+<a href="#genres">Төрөл</a>
 
-<a href="#chapters">
-Бүлгүүд
-</a>
+<a href="#chapters">Бүлгүүд</a>
 
 </nav>
 
@@ -600,17 +581,8 @@ id="home">
 <div class="hero-content">
 
 <h1>
-
-<span class="the">
-𝒯𝘩𝘦
-</span>
-
-<span class="awary">
-𝘢𝘸𝘢𝘳𝘺
-</span>
-
+ᴛʜᴇ ᴀᴡᴀʀʏ
 </h1>
-
 
 <a
 href="#library"
@@ -638,8 +610,6 @@ id="featured">
 <div class="featured-row">
 
 
-<!-- ДАХИН ГЭРЭЛ ӨӨД -->
-
 <div class="featured-card">
 
 <img
@@ -657,8 +627,6 @@ alt="Дахин гэрэл өөд"
 
 </div>
 
-
-<!-- НАМАЙГ ҮЗЭН ЯДДАГ НӨХӨР -->
 
 <div class="featured-card">
 
@@ -702,8 +670,6 @@ placeholder="🔍 Манганы нэрээр хайх..."
 >
 
 
-<!-- ===== GENRES ===== -->
-
 <div
 class="genre-buttons"
 id="genres">
@@ -711,46 +677,34 @@ id="genres">
 <button
 class="genre active"
 data-genre="all">
-
 Бүгд
-
 </button>
 
 <button
 class="genre"
 data-genre="drama">
-
 Драма
-
 </button>
 
 <button
 class="genre"
 data-genre="fantasy">
-
 Уран зөгнөл
-
 </button>
 
 <button
 class="genre"
 data-genre="reincarnation">
-
 Дахин төрөлт
-
 </button>
 
 </div>
 
 
-<!-- ===== MANGA GRID ===== -->
-
 <div
 class="manga-grid"
 id="mangaGrid">
 
-
-<!-- 1. НАМАЙГ ҮЗЭН ЯДДАГ НӨХӨР -->
 
 <div
 class="manga-card"
@@ -781,8 +735,6 @@ alt="Намайг үзэн яддаг нөхөр маань ой санамжа�
 
 </div>
 
-
-<!-- 2. ДАХИН ГЭРЭЛ ӨӨД -->
 
 <div
 class="manga-card"
@@ -859,8 +811,6 @@ THE AWARY MANGA
 
 </footer>
 
-
-<!-- ===== SEARCH + FILTER ===== -->
 
 <script>
 
