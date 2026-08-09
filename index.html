@@ -9,6 +9,8 @@
 
 <style>
 
+/* ===== ҮНДСЭН ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -132,7 +134,14 @@ nav a:hover {
 .hero-content {
     position: relative;
     z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+
+/* THE AWARY */
 
 .hero h1 {
     color: white;
@@ -142,22 +151,37 @@ nav a:hover {
         "Times New Roman",
         serif;
 
-    font-size: clamp(48px, 9vw, 92px);
+    font-size: clamp(52px, 10vw, 100px);
 
-    font-weight: 900;
+    font-weight: 500;
 
-    letter-spacing: 1px;
+    letter-spacing: 5px;
+
+    line-height: 1;
 }
 
+
+/* TAGLINE */
+
 .hero p {
-    margin-top: 22px;
+    margin-top: 18px;
 
     color: #c4cdd5;
 
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size: 15px;
+
+    letter-spacing: 1px;
 
     line-height: 1.7;
 }
+
+
+/* БҮХ МАНГА */
 
 .hero-button {
     display: inline-block;
@@ -502,7 +526,12 @@ footer {
     }
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 50px;
+        letter-spacing: 3px;
+    }
+
+    .hero p {
+        font-size: 14px;
     }
 
     .section {
@@ -529,11 +558,13 @@ footer {
     .manga-cover {
         height: 225px;
     }
+
 }
 
 </style>
 
 </head>
+
 
 <body>
 
@@ -550,11 +581,25 @@ THE AWARY MANGA
 
 <nav>
 
-<a href="#home">Нүүр</a>
-<a href="#featured">Онцлох</a>
-<a href="#library">Манга</a>
-<a href="#genres">Төрөл</a>
-<a href="#chapters">Бүлгүүд</a>
+<a href="#home">
+Нүүр
+</a>
+
+<a href="#featured">
+Онцлох манга
+</a>
+
+<a href="#library">
+Бүх манга
+</a>
+
+<a href="#genres">
+Төрөл
+</a>
+
+<a href="#chapters">
+Бүлгүүд
+</a>
 
 </nav>
 
@@ -565,23 +610,25 @@ THE AWARY MANGA
 
 <!-- ===== HOME ===== -->
 
-<section class="hero" id="home">
+<section
+class="hero"
+id="home">
 
 <div class="hero-content">
 
 <h1>
-𝐓𝐇𝐄 𝐀𝐖𝐀𝐑𝐘
+THE AWARY
 </h1>
 
 <p>
-Хуудаснаас цааш үргэлжлэх түүхүүд.
+Хуудас бүрт шинэ ертөнц.
 </p>
 
 <a
 href="#library"
 class="hero-button">
 
-МАНГАНЫ САН
+БҮХ МАНГА
 
 </a>
 
@@ -655,7 +702,7 @@ class="section"
 id="library">
 
 <h2 class="section-title">
-Манганы сан
+Бүх манга
 </h2>
 
 
@@ -819,7 +866,7 @@ THE AWARY MANGA
 </div>
 
 <p>
-Хуудаснаас цааш үргэлжлэх түүхүүд.
+Хуудас бүрт шинэ ертөнц.
 </p>
 
 <p style="margin-top:15px;">
