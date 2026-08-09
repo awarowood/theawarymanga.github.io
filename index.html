@@ -9,6 +9,8 @@
 
 <style>
 
+/* ===== ҮНДСЭН ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -87,7 +89,11 @@ nav a:hover {
 /* ===== HERO ===== */
 
 .hero {
-    min-height: 72vh;
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    max-height: 760px;
 
     position: relative;
 
@@ -101,15 +107,15 @@ nav a:hover {
 
     background:
         linear-gradient(
-            rgba(10,19,45,0.48),
-            rgba(10,19,45,0.86)
+            rgba(10,19,45,0.42),
+            rgba(10,19,45,0.82)
         ),
-        url("IMG_0993.jpeg");
+        url("IMG_1003.jpeg");
 
     background-size: cover;
     background-position: center;
 
-    padding: 70px 20px;
+    padding: 40px 20px;
 }
 
 .hero::after {
@@ -121,9 +127,9 @@ nav a:hover {
     background:
         linear-gradient(
             135deg,
-            rgba(21,0,126,0.18),
+            rgba(21,0,126,0.16),
             transparent 50%,
-            rgba(101,7,11,0.15)
+            rgba(101,7,11,0.12)
         );
 
     pointer-events: none;
@@ -142,18 +148,16 @@ nav a:hover {
 /* ===== THE AWARY ===== */
 
 .hero h1 {
+
     color: white;
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-    font-size: clamp(45px, 9vw, 90px);
+    font-size: clamp(42px, 8vw, 86px);
 
     font-weight: 800;
 
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 
     line-height: 1;
 }
@@ -162,11 +166,12 @@ nav a:hover {
 /* ===== БҮХ МАНГА ===== */
 
 .hero-button {
+
     display: inline-block;
 
-    margin-top: 40px;
+    margin-top: 20px;
 
-    padding: 14px 30px;
+    padding: 13px 28px;
 
     background: #15007E;
 
@@ -186,7 +191,9 @@ nav a:hover {
 }
 
 .hero-button:hover {
+
     background: #65070B;
+
     border-color: #65070B;
 }
 
@@ -194,13 +201,16 @@ nav a:hover {
 /* ===== SECTION ===== */
 
 .section {
+
     width: 90%;
+
     max-width: 1250px;
 
     margin: 80px auto;
 }
 
 .section-title {
+
     color: white;
 
     font-size: 28px;
@@ -214,6 +224,7 @@ nav a:hover {
 /* ===== FEATURED ===== */
 
 .featured-row {
+
     display: flex;
 
     gap: 22px;
@@ -228,13 +239,16 @@ nav a:hover {
 }
 
 .featured-card {
+
     min-width: 210px;
 
     scroll-snap-align: start;
 }
 
 .featured-card img {
+
     width: 210px;
+
     height: 310px;
 
     object-fit: cover;
@@ -250,6 +264,7 @@ nav a:hover {
 }
 
 .featured-card h3 {
+
     margin-top: 13px;
 
     color: white;
@@ -257,9 +272,12 @@ nav a:hover {
     font-size: 16px;
 
     font-weight: 900;
+
+    line-height: 1.4;
 }
 
 .featured-card p {
+
     margin-top: 6px;
 
     color: #aeb9c3;
@@ -273,6 +291,7 @@ nav a:hover {
 /* ===== SEARCH ===== */
 
 .search {
+
     width: 100%;
 
     padding: 16px 18px;
@@ -293,10 +312,12 @@ nav a:hover {
 }
 
 .search::placeholder {
+
     color: #687784;
 }
 
 .search:focus {
+
     border-color: #15007E;
 }
 
@@ -304,6 +325,7 @@ nav a:hover {
 /* ===== GENRES ===== */
 
 .genre-buttons {
+
     display: flex;
 
     flex-wrap: wrap;
@@ -314,6 +336,7 @@ nav a:hover {
 }
 
 .genre {
+
     padding: 9px 15px;
 
     background: transparent;
@@ -336,11 +359,14 @@ nav a:hover {
 }
 
 .genre:hover {
+
     color: white;
+
     border-color: #15007E;
 }
 
 .genre.active {
+
     background: #15007E;
 
     color: white;
@@ -352,6 +378,7 @@ nav a:hover {
 /* ===== MANGA GRID ===== */
 
 .manga-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -364,6 +391,7 @@ nav a:hover {
 }
 
 .manga-card {
+
     background: #081024;
 
     border: 1px solid rgba(82,98,110,0.35);
@@ -376,12 +404,14 @@ nav a:hover {
 }
 
 .manga-card:hover {
+
     transform: translateY(-6px);
 
     border-color: #15007E;
 }
 
 .manga-cover {
+
     width: 100%;
 
     height: 270px;
@@ -392,10 +422,12 @@ nav a:hover {
 }
 
 .manga-info {
+
     padding: 15px;
 }
 
 .manga-title {
+
     color: white;
 
     font-size: 17px;
@@ -406,6 +438,7 @@ nav a:hover {
 }
 
 .manga-genres {
+
     color: #697987;
 
     font-size: 11px;
@@ -414,6 +447,7 @@ nav a:hover {
 }
 
 .manga-status {
+
     color: #aeb9c3;
 
     font-size: 11px;
@@ -427,6 +461,7 @@ nav a:hover {
 /* ===== CHAPTER ===== */
 
 .empty-state {
+
     padding: 45px 25px;
 
     background: #081024;
@@ -439,6 +474,7 @@ nav a:hover {
 }
 
 .empty-state strong {
+
     display: block;
 
     color: white;
@@ -451,6 +487,7 @@ nav a:hover {
 }
 
 .empty-state p {
+
     color: #687784;
 
     font-size: 13px;
@@ -462,6 +499,7 @@ nav a:hover {
 /* ===== FOOTER ===== */
 
 footer {
+
     margin-top: 110px;
 
     padding: 55px 20px;
@@ -474,6 +512,7 @@ footer {
 }
 
 .footer-logo {
+
     color: white;
 
     font-size: 18px;
@@ -491,38 +530,61 @@ footer {
 @media(max-width:700px) {
 
     .header-inner {
+
         flex-direction: column;
+
         align-items: flex-start;
     }
 
     nav {
+
         width: 100%;
     }
 
     .hero {
-        min-height: 65vh;
+
+        aspect-ratio: 4 / 3;
+
+        min-height: 0;
+
+        max-height: none;
     }
 
     .hero h1 {
-        font-size: 45px;
+
+        font-size: 42px;
+
         letter-spacing: 2px;
     }
 
+    .hero-button {
+
+        margin-top: 16px;
+
+        padding: 12px 25px;
+    }
+
     .section {
+
         width: 90%;
+
         margin: 60px auto;
     }
 
     .featured-card {
+
         min-width: 165px;
     }
 
     .featured-card img {
+
         width: 165px;
+
         height: 250px;
     }
 
     .manga-grid {
+
         grid-template-columns:
             repeat(2,minmax(0,1fr));
 
@@ -530,6 +592,7 @@ footer {
     }
 
     .manga-cover {
+
         height: 225px;
     }
 
@@ -555,15 +618,25 @@ THE AWARY MANGA
 
 <nav>
 
-<a href="#home">Нүүр</a>
+<a href="#home">
+Нүүр
+</a>
 
-<a href="#featured">Онцлох манга</a>
+<a href="#featured">
+Онцлох манга
+</a>
 
-<a href="#library">Бүх манга</a>
+<a href="#library">
+Бүх манга
+</a>
 
-<a href="#genres">Төрөл</a>
+<a href="#genres">
+Төрөл
+</a>
 
-<a href="#chapters">Бүлгүүд</a>
+<a href="#chapters">
+Бүлгүүд
+</a>
 
 </nav>
 
@@ -610,6 +683,8 @@ id="featured">
 <div class="featured-row">
 
 
+<!-- ДАХИН ГЭРЭЛ ӨӨД -->
+
 <div class="featured-card">
 
 <img
@@ -628,15 +703,17 @@ alt="Дахин гэрэл өөд"
 </div>
 
 
+<!-- ТА ХОЁРЫН ЗУУЧЛАГЧ БОЛОХЫГ ХҮСЭХГҮЙ БАЙНА -->
+
 <div class="featured-card">
 
 <img
-src="IMG_0991.jpeg"
-alt="Намайг үзэн яддаг нөхөр маань ой санамжаа алдчихлаа"
+src="photo-output.jpeg"
+alt="Та хоёрын зуучлагч болохыг хүсэхгүй байна"
 >
 
 <h3>
-Намайг үзэн яддаг нөхөр маань ой санамжаа алдчихлаа
+Та хоёрын зуучлагч болохыг хүсэхгүй байна
 </h3>
 
 <p>
@@ -670,6 +747,8 @@ placeholder="🔍 Манганы нэрээр хайх..."
 >
 
 
+<!-- ===== GENRES ===== -->
+
 <div
 class="genre-buttons"
 id="genres">
@@ -677,64 +756,70 @@ id="genres">
 <button
 class="genre active"
 data-genre="all">
+
 Бүгд
+
 </button>
 
 <button
 class="genre"
 data-genre="drama">
+
 Драма
+
 </button>
 
 <button
 class="genre"
 data-genre="fantasy">
+
 Уран зөгнөл
+
 </button>
 
 <button
 class="genre"
 data-genre="reincarnation">
+
 Дахин төрөлт
+
+</button>
+
+<button
+class="genre"
+data-genre="comedy">
+
+Инээдэм
+
+</button>
+
+<button
+class="genre"
+data-genre="school">
+
+Сургуулийн амьдрал
+
+</button>
+
+<button
+class="genre"
+data-genre="romance">
+
+Романтик
+
 </button>
 
 </div>
 
+
+<!-- ===== MANGA GRID ===== -->
 
 <div
 class="manga-grid"
 id="mangaGrid">
 
 
-<div
-class="manga-card"
-data-title="Намайг үзэн яддаг нөхөр маань ой санамжаа алдчихлаа"
-data-genres="drama">
-
-<img
-class="manga-cover"
-src="IMG_0991.jpeg"
-alt="Намайг үзэн яддаг нөхөр маань ой санамжаа алдчихлаа"
->
-
-<div class="manga-info">
-
-<div class="manga-title">
-Намайг үзэн яддаг нөхөр маань ой санамжаа алдчихлаа
-</div>
-
-<div class="manga-genres">
-Драма
-</div>
-
-<div class="manga-status">
-● Удахгүй
-</div>
-
-</div>
-
-</div>
-
+<!-- 1. ДАХИН ГЭРЭЛ ӨӨД -->
 
 <div
 class="manga-card"
@@ -755,6 +840,38 @@ alt="Дахин гэрэл өөд"
 
 <div class="manga-genres">
 Уран зөгнөл • Дахин төрөлт
+</div>
+
+<div class="manga-status">
+● Удахгүй
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 2. ТА ХОЁРЫН ЗУУЧЛАГЧ -->
+
+<div
+class="manga-card"
+data-title="Та хоёрын зуучлагч болохыг хүсэхгүй байна"
+data-genres="comedy school romance">
+
+<img
+class="manga-cover"
+src="photo-output.jpeg"
+alt="Та хоёрын зуучлагч болохыг хүсэхгүй байна"
+>
+
+<div class="manga-info">
+
+<div class="manga-title">
+Та хоёрын зуучлагч болохыг хүсэхгүй байна
+</div>
+
+<div class="manga-genres">
+Инээдэм • Сургуулийн амьдрал • Романтик
 </div>
 
 <div class="manga-status">
@@ -811,6 +928,8 @@ THE AWARY MANGA
 
 </footer>
 
+
+<!-- ===== SEARCH + FILTER ===== -->
 
 <script>
 
