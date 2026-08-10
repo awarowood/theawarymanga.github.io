@@ -34,9 +34,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 /* =========================
-   WELCOME PAGE
+WELCOME
 ========================= */
 
 #welcomePage {
@@ -96,11 +95,6 @@ body {
     opacity: 0.9;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
 .welcome-buttons {
     display: flex;
     justify-content: center;
@@ -137,9 +131,8 @@ body {
     color: var(--cream);
 }
 
-
 /* =========================
-   AUTH
+AUTH
 ========================= */
 
 .auth-modal {
@@ -150,7 +143,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-
     background: rgba(0,0,0,0.72);
     backdrop-filter: blur(10px);
 }
@@ -186,10 +178,8 @@ body {
     position: absolute;
     top: 12px;
     right: 15px;
-
     background: none;
     border: none;
-
     color: var(--cream);
     font-size: 22px;
     cursor: pointer;
@@ -207,11 +197,9 @@ body {
     width: 100%;
     padding: 14px;
     margin-bottom: 12px;
-
     background: rgba(3,3,3,0.8);
     border: 1px solid rgba(114,111,91,0.7);
     border-radius: 4px;
-
     outline: none;
     color: var(--cream);
     font-size: 13px;
@@ -229,13 +217,10 @@ body {
     width: 100%;
     padding: 14px;
     margin-top: 7px;
-
     border: none;
     border-radius: 4px;
-
     background: var(--brown);
     color: var(--cream);
-
     font-weight: 900;
     cursor: pointer;
     transition: 0.3s;
@@ -245,10 +230,14 @@ body {
     background: var(--olive);
 }
 
+.auth-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 .auth-switch {
     margin-top: 20px;
     text-align: center;
-
     color: rgba(239,237,230,0.65);
     font-size: 12px;
 }
@@ -269,9 +258,8 @@ body {
     min-height: 16px;
 }
 
-
 /* =========================
-   MAIN SITE
+MAIN
 ========================= */
 
 #mainSite {
@@ -280,28 +268,23 @@ body {
     background: var(--black);
 }
 
-
 /* =========================
-   HEADER
+HEADER
 ========================= */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-
     background: rgba(3,3,3,0.94);
     backdrop-filter: blur(15px);
-
     border-bottom: 1px solid rgba(114,111,91,0.35);
-
     padding: 17px 5%;
 }
 
 .header-inner {
     max-width: 1250px;
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -356,31 +339,24 @@ nav a:hover {
     background: transparent;
     border: 1px solid var(--olive);
     color: var(--cream);
-
     padding: 7px 10px;
     border-radius: 3px;
-
     font-size: 10px;
     font-weight: 800;
-
     cursor: pointer;
 }
 
-
 /* =========================
-   HERO
+HERO
 ========================= */
 
 .hero {
     width: 100%;
     aspect-ratio: 4 / 3;
-
     position: relative;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
     overflow: hidden;
 
@@ -412,20 +388,14 @@ nav a:hover {
 
 .hero-button {
     display: inline-block;
-
     padding: 13px 28px;
-
     background: var(--brown);
     border: 1px solid var(--brown);
-
     color: var(--cream);
     text-decoration: none;
-
     border-radius: 4px;
-
     font-size: 12px;
     font-weight: 900;
-
     transition: 0.3s;
 }
 
@@ -434,9 +404,8 @@ nav a:hover {
     border-color: var(--olive);
 }
 
-
 /* =========================
-   SECTION
+SECTION
 ========================= */
 
 .section {
@@ -452,9 +421,8 @@ nav a:hover {
     margin-bottom: 28px;
 }
 
-
 /* =========================
-   FEATURED
+FEATURED
 ========================= */
 
 .featured-row {
@@ -471,10 +439,8 @@ nav a:hover {
 .featured-card img {
     width: 210px;
     height: 310px;
-
     object-fit: cover;
     display: block;
-
     border-radius: 6px;
     border: 1px solid rgba(114,111,91,0.5);
 }
@@ -482,7 +448,6 @@ nav a:hover {
 .featured-card h3 {
     margin-top: 13px;
     color: var(--cream);
-
     font-size: 16px;
     font-weight: 900;
     line-height: 1.4;
@@ -495,24 +460,19 @@ nav a:hover {
     font-weight: 800;
 }
 
-
 /* =========================
-   SEARCH
+SEARCH
 ========================= */
 
 .search {
     width: 100%;
     padding: 16px 18px;
-
     background: rgba(3,3,3,0.75);
     border: 1px solid rgba(114,111,91,0.55);
-
     border-radius: 5px;
-
     color: var(--cream);
     font-size: 14px;
     outline: none;
-
     margin-bottom: 20px;
 }
 
@@ -524,9 +484,8 @@ nav a:hover {
     border-color: var(--cream);
 }
 
-
 /* =========================
-   GENRES
+GENRES
 ========================= */
 
 .genre-buttons {
@@ -538,20 +497,14 @@ nav a:hover {
 
 .genre {
     padding: 9px 15px;
-
     background: transparent;
     border: 1px solid rgba(114,111,91,0.7);
-
     color: var(--olive);
-
     border-radius: 4px;
-
     cursor: pointer;
-
     font-family: inherit;
     font-size: 12px;
     font-weight: 800;
-
     transition: 0.25s;
 }
 
@@ -566,32 +519,21 @@ nav a:hover {
     border-color: var(--brown);
 }
 
-
 /* =========================
-   MANGA GRID
+MANGA GRID
 ========================= */
 
 .manga-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fill,
-            minmax(180px,1fr)
-        );
-
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
     gap: 22px;
 }
 
 .manga-card {
     background: rgba(3,3,3,0.88);
-
     border: 1px solid rgba(114,111,91,0.35);
-
     border-radius: 7px;
-
     overflow: hidden;
-
     transition: 0.3s;
 }
 
@@ -603,7 +545,6 @@ nav a:hover {
 .manga-cover {
     width: 100%;
     height: 270px;
-
     object-fit: cover;
     display: block;
 }
@@ -628,78 +569,58 @@ nav a:hover {
 .manga-status {
     color: var(--cream);
     opacity: 0.7;
-
     font-size: 11px;
     font-weight: 800;
-
     margin-top: 10px;
 }
 
-
 /* =========================
-   CHAPTERS
+EMPTY
 ========================= */
 
 .empty-state {
     padding: 45px 25px;
-
     background: rgba(3,3,3,0.8);
-
     border: 1px solid rgba(114,111,91,0.35);
-
     border-radius: 7px;
-
     text-align: center;
 }
 
 .empty-state strong {
     display: block;
-
     color: var(--cream);
-
     font-size: 17px;
-
     margin-bottom: 10px;
 }
 
 .empty-state p {
     color: var(--olive);
-
     font-size: 13px;
-
     line-height: 1.7;
 }
 
-
 /* =========================
-   FOOTER
+FOOTER
 ========================= */
 
 footer {
     margin-top: 110px;
     padding: 55px 20px;
-
     text-align: center;
-
     border-top: 1px solid rgba(114,111,91,0.3);
-
     color: var(--olive);
 }
 
 .footer-logo {
     color: var(--cream);
-
     font-size: 18px;
     font-weight: 900;
-
     letter-spacing: 3px;
-
     margin-bottom: 12px;
 }
 
-
 /* =========================
-   MOBILE
+MOBILE
 ========================= */
 
 @media(max-width:700px) {
@@ -746,9 +667,7 @@ footer {
     }
 
     .manga-grid {
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-
+        grid-template-columns: repeat(2,minmax(0,1fr));
         gap: 13px;
     }
 
@@ -757,30 +676,15 @@ footer {
     }
 }
 
-
-/* =========================
-   DESKTOP
-========================= */
-
-@media(min-width:701px) {
-
-    .hero {
-        min-height: 0;
-    }
-
-}
-
 </style>
 
 </head>
 
-
 <body>
 
-
-<!-- =====================================================
-     WELCOME
-===================================================== -->
+<!-- =========================
+WELCOME PAGE
+========================= -->
 
 <div id="welcomePage">
 
@@ -801,17 +705,13 @@ footer {
             <button
                 class="welcome-button"
                 onclick="openLogin()">
-
                 НЭВТРЭХ
-
             </button>
 
             <button
                 class="welcome-button register"
                 onclick="openRegister()">
-
                 БҮРТГҮҮЛЭХ
-
             </button>
 
         </div>
@@ -821,9 +721,9 @@ footer {
 </div>
 
 
-<!-- =====================================================
-     AUTH MODAL
-===================================================== -->
+<!-- =========================
+AUTH MODAL
+========================= -->
 
 <div
     class="auth-modal"
@@ -834,9 +734,7 @@ footer {
         <button
             class="close-auth"
             onclick="closeAuth()">
-
             ×
-
         </button>
 
 
@@ -862,10 +760,9 @@ footer {
 
             <button
                 class="auth-submit"
+                id="loginButton"
                 onclick="loginUser()">
-
                 НЭВТРЭХ
-
             </button>
 
             <div
@@ -922,10 +819,9 @@ footer {
 
             <button
                 class="auth-submit"
+                id="registerButton"
                 onclick="registerUser()">
-
                 БҮРТГҮҮЛЭХ
-
             </button>
 
             <div
@@ -950,12 +846,11 @@ footer {
 </div>
 
 
-<!-- =====================================================
-     MAIN SITE
-===================================================== -->
+<!-- =========================
+MAIN SITE
+========================= -->
 
 <div id="mainSite">
-
 
 <header>
 
@@ -967,25 +862,15 @@ footer {
 
         <nav>
 
-            <a href="#home">
-                Нүүр
-            </a>
+            <a href="#home">Нүүр</a>
 
-            <a href="#featured">
-                Онцлох манга
-            </a>
+            <a href="#featured">Онцлох манга</a>
 
-            <a href="#library">
-                Бүх манга
-            </a>
+            <a href="#library">Бүх манга</a>
 
-            <a href="#genres">
-                Төрөл
-            </a>
+            <a href="#genres">Төрөл</a>
 
-            <a href="#chapters">
-                Бүлгүүд
-            </a>
+            <a href="#chapters">Бүлгүүд</a>
 
         </nav>
 
@@ -999,9 +884,7 @@ footer {
             <button
                 class="logout-button"
                 onclick="logoutUser()">
-
                 Гарах
-
             </button>
 
         </div>
@@ -1010,8 +893,6 @@ footer {
 
 </header>
 
-
-<!-- HERO -->
 
 <section
     class="hero"
@@ -1026,17 +907,13 @@ footer {
         <a
             href="#library"
             class="hero-button">
-
             БҮХ МАНГА
-
         </a>
 
     </div>
 
 </section>
 
-
-<!-- FEATURED -->
 
 <section
     class="section"
@@ -1047,7 +924,6 @@ footer {
     </h2>
 
     <div class="featured-row">
-
 
         <div class="featured-card">
 
@@ -1082,13 +958,10 @@ footer {
 
         </div>
 
-
     </div>
 
 </section>
 
-
-<!-- ALL MANGA -->
 
 <section
     class="section"
@@ -1112,49 +985,37 @@ footer {
         <button
             class="genre active"
             data-genre="all">
-
             Бүгд
-
         </button>
 
         <button
             class="genre"
             data-genre="fantasy">
-
             Уран зөгнөл
-
         </button>
 
         <button
             class="genre"
             data-genre="reincarnation">
-
             Дахин төрөлт
-
         </button>
 
         <button
             class="genre"
             data-genre="comedy">
-
             Инээдэм
-
         </button>
 
         <button
             class="genre"
             data-genre="school">
-
             Сургуулийн амьдрал
-
         </button>
 
         <button
             class="genre"
             data-genre="romance">
-
             Романтик
-
         </button>
 
     </div>
@@ -1228,8 +1089,6 @@ footer {
 </section>
 
 
-<!-- CHAPTERS -->
-
 <section
     class="section"
     id="chapters">
@@ -1254,8 +1113,6 @@ footer {
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
     <div class="footer-logo">
@@ -1268,31 +1125,32 @@ footer {
 
 </footer>
 
-
 </div>
 
 
 <script>
 
 /* =====================================================
-   SUPABASE
+SUPABASE
 ===================================================== */
 
 const SUPABASE_URL =
     "https://qfauervptngofdablbsj.supabase.co";
 
-const SUPABASE_KEY =
-    "sb_publishable_IlQdRIiCjBj_bWsXOWBteg_l_3w8m7I";
 
-const supabaseClient =
+const SUPABASE_PUBLISHABLE_KEY =
+    "YOUR_PUBLISHABLE_KEY";
+
+
+const db =
     window.supabase.createClient(
         SUPABASE_URL,
-        SUPABASE_KEY
+        SUPABASE_PUBLISHABLE_KEY
     );
 
 
 /* =====================================================
-   ELEMENTS
+ELEMENTS
 ===================================================== */
 
 const welcomePage =
@@ -1315,7 +1173,7 @@ const currentUser =
 
 
 /* =====================================================
-   AUTH MODAL
+AUTH MODAL
 ===================================================== */
 
 function openLogin() {
@@ -1326,6 +1184,7 @@ function openLogin() {
 
 }
 
+
 function openRegister() {
 
     authModal.classList.add("active");
@@ -1334,11 +1193,13 @@ function openRegister() {
 
 }
 
+
 function closeAuth() {
 
     authModal.classList.remove("active");
 
 }
+
 
 function showLogin() {
 
@@ -1347,6 +1208,7 @@ function showLogin() {
     registerForm.style.display = "none";
 
 }
+
 
 function showRegister() {
 
@@ -1358,47 +1220,43 @@ function showRegister() {
 
 
 /* =====================================================
-   REGISTER
+REGISTER
 ===================================================== */
 
 async function registerUser() {
 
     const name =
         document
-        .getElementById("registerName")
-        .value
-        .trim();
+            .getElementById("registerName")
+            .value
+            .trim();
 
     const email =
         document
-        .getElementById("registerEmail")
-        .value
-        .trim();
+            .getElementById("registerEmail")
+            .value
+            .trim();
 
     const password =
         document
-        .getElementById("registerPassword")
-        .value;
+            .getElementById("registerPassword")
+            .value;
 
     const password2 =
         document
-        .getElementById("registerPassword2")
-        .value;
+            .getElementById("registerPassword2")
+            .value;
 
     const message =
         document
-        .getElementById("registerMessage");
+            .getElementById("registerMessage");
+
+    const button =
+        document
+            .getElementById("registerButton");
 
 
-    message.textContent = "";
-
-
-    if (
-        !name ||
-        !email ||
-        !password ||
-        !password2
-    ) {
+    if (!name || !email || !password || !password2) {
 
         message.textContent =
             "Бүх талбарыг бөглөнө үү.";
@@ -1428,126 +1286,166 @@ async function registerUser() {
     }
 
 
+    button.disabled = true;
+
     message.textContent =
         "Бүртгүүлж байна...";
 
 
-    const {
-        data,
-        error
-    } =
-    await supabaseClient.auth.signUp({
+    try {
 
-        email: email,
+        const {
+            data,
+            error
+        } =
+            await db.auth.signUp({
 
-        password: password
+                email: email,
 
-    });
+                password: password,
 
+                options: {
 
-    if (error) {
+                    data: {
+                        username: name
+                    }
 
-        message.textContent =
-            error.message;
+                }
 
-        return;
-
-    }
-
-
-    const user =
-        data.user;
+            });
 
 
-    /*
-       EMAIL CONFIRMATION АСААЛТТАЙ БОЛ
-       SESSION ШУУД ҮҮСЭХГҮЙ.
-    */
+        if (error) {
 
-    if (!data.session) {
+            console.error(error);
 
-        message.textContent =
-            "Бүртгэл амжилттай. И-мэйлээ шалгаад баталгаажуулна уу.";
+            if (
+                error.message
+                    .toLowerCase()
+                    .includes("rate limit")
+            ) {
 
-        return;
+                message.textContent =
+                    "И-мэйл илгээлтийн хязгаарт хүрсэн байна. Түр хүлээгээд дахин оролдоно уу.";
 
-    }
+            } else {
 
+                message.textContent =
+                    error.message;
 
-    /*
-       PROFILE ҮҮСГЭХ
-    */
-
-    const {
-        error: profileError
-    } =
-    await supabaseClient
-        .from("profiles")
-        .insert({
-
-            id: user.id,
-
-            username: name,
-
-            avatar_url: null
-
-        });
-
-
-    if (profileError) {
-
-        console.log(
-            "Profile error:",
-            profileError
-        );
-
-    }
-
-
-    message.textContent =
-        "Бүртгэл амжилттай үүслээ.";
-
-
-    setTimeout(() => {
-
-        closeAuth();
-
-        enterSite(
-            user,
-            {
-                username: name
             }
-        );
 
-    }, 800);
+            return;
+
+        }
+
+
+        if (!data.user) {
+
+            message.textContent =
+                "Хэрэглэгч үүссэнгүй.";
+
+            return;
+
+        }
+
+
+        /*
+        PROFILE ҮҮСГЭХ
+        */
+
+        const {
+            error: profileError
+        } =
+            await db
+                .from("profiles")
+                .insert({
+
+                    id: data.user.id,
+
+                    username: name
+
+                });
+
+
+        if (profileError) {
+
+            console.error(
+                "Profile error:",
+                profileError
+            );
+
+        }
+
+
+        /*
+        EMAIL CONFIRMATION
+        */
+
+        if (!data.session) {
+
+            message.textContent =
+                "Бүртгэл амжилттай! Gmail-ээ шалгаад баталгаажуулна уу.";
+
+        } else {
+
+            message.textContent =
+                "Бүртгэл амжилттай!";
+
+        }
+
+
+        setTimeout(() => {
+
+            showLogin();
+
+            document
+                .getElementById("loginEmail")
+                .value = email;
+
+        }, 1800);
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        message.textContent =
+            "Алдаа гарлаа. Дахин оролдоно уу.";
+
+    } finally {
+
+        button.disabled = false;
+
+    }
 
 }
 
 
 /* =====================================================
-   LOGIN
+LOGIN
 ===================================================== */
 
 async function loginUser() {
 
     const email =
         document
-        .getElementById("loginEmail")
-        .value
-        .trim();
+            .getElementById("loginEmail")
+            .value
+            .trim();
 
     const password =
         document
-        .getElementById("loginPassword")
-        .value;
+            .getElementById("loginPassword")
+            .value;
 
     const message =
         document
-        .getElementById("loginMessage");
+            .getElementById("loginMessage");
 
-
-    message.textContent =
-        "Нэвтэрч байна...";
+    const button =
+        document
+            .getElementById("loginButton");
 
 
     if (!email || !password) {
@@ -1560,124 +1458,103 @@ async function loginUser() {
     }
 
 
-    const {
-        data,
-        error
-    } =
-    await supabaseClient.auth.signInWithPassword({
+    button.disabled = true;
 
-        email: email,
-
-        password: password
-
-    });
+    message.textContent =
+        "Нэвтэрч байна...";
 
 
-    if (error) {
-
-        console.log(error);
-
-        message.textContent =
-            "И-мэйл эсвэл нууц үг буруу байна.";
-
-        return;
-
-    }
-
-
-    const user =
-        data.user;
-
-
-    /*
-       PROFILE АВАХ
-    */
-
-    let {
-        data: profile,
-        error: profileError
-    } =
-    await supabaseClient
-        .from("profiles")
-        .select(
-            "id, username, avatar_url"
-        )
-        .eq(
-            "id",
-            user.id
-        )
-        .maybeSingle();
-
-
-    /*
-       PROFILE БАЙХГҮЙ БОЛ ҮҮСГЭХ
-    */
-
-    if (
-        !profile &&
-        !profileError
-    ) {
-
-        const nameFromEmail =
-            email.split("@")[0];
-
+    try {
 
         const {
-            data: newProfile,
-            error: insertError
+            data,
+            error
         } =
-        await supabaseClient
-            .from("profiles")
-            .insert({
+            await db.auth.signInWithPassword({
 
-                id: user.id,
+                email: email,
 
-                username: nameFromEmail,
+                password: password
 
-                avatar_url: null
-
-            })
-            .select()
-            .single();
+            });
 
 
-        if (!insertError) {
+        if (error) {
 
-            profile =
-                newProfile;
+            console.error(error);
+
+            message.textContent =
+                "И-мэйл эсвэл нууц үг буруу байна.";
+
+            return;
 
         }
 
+
+        await showLoggedInUser(
+            data.user
+        );
+
+
+        closeAuth();
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        message.textContent =
+            "Нэвтрэх үед алдаа гарлаа.";
+
+    } finally {
+
+        button.disabled = false;
+
     }
-
-
-    enterSite(
-        user,
-        profile
-    );
 
 }
 
 
 /* =====================================================
-   ENTER SITE
+SHOW USER
 ===================================================== */
 
-function enterSite(
-    user,
-    profile = null
-) {
+async function showLoggedInUser(user) {
+
+    if (!user) return;
+
 
     let username =
-        profile?.username;
+        user
+            .user_metadata
+            ?.username;
 
 
     if (!username) {
 
         username =
             user.email
-            ? user.email.split("@")[0]
-            : "User";
+                ?.split("@")[0] ||
+            "User";
+
+    }
+
+
+    const {
+        data: profile,
+        error
+    } =
+        await db
+            .from("profiles")
+            .select("username")
+            .eq("id", user.id)
+            .maybeSingle();
+
+
+    if (!error && profile?.username) {
+
+        username =
+            profile.username;
 
     }
 
@@ -1693,9 +1570,6 @@ function enterSite(
         "block";
 
 
-    closeAuth();
-
-
     window.scrollTo(
         0,
         0
@@ -1705,13 +1579,16 @@ function enterSite(
 
 
 /* =====================================================
-   LOGOUT
+LOGOUT
 ===================================================== */
 
 async function logoutUser() {
 
-    await supabaseClient.auth.signOut();
+    await db.auth.signOut();
 
+
+    currentUser.textContent =
+        "";
 
     mainSite.style.display =
         "none";
@@ -1719,22 +1596,19 @@ async function logoutUser() {
     welcomePage.style.display =
         "flex";
 
-    currentUser.textContent =
-        "";
-
 }
 
 
 /* =====================================================
-   CHECK CURRENT SESSION
+CHECK CURRENT SESSION
 ===================================================== */
 
-async function checkUser() {
+async function checkSession() {
 
     const {
         data
     } =
-    await supabaseClient.auth.getSession();
+        await db.auth.getSession();
 
 
     const session =
@@ -1754,67 +1628,33 @@ async function checkUser() {
     }
 
 
-    const user =
-        session.user;
-
-
-    const {
-        data: profile
-    } =
-    await supabaseClient
-        .from("profiles")
-        .select(
-            "id, username, avatar_url"
-        )
-        .eq(
-            "id",
-            user.id
-        )
-        .maybeSingle();
-
-
-    enterSite(
-        user,
-        profile
+    await showLoggedInUser(
+        session.user
     );
 
 }
 
 
+checkSession();
+
+
 /* =====================================================
-   AUTH STATE
+AUTH STATE
 ===================================================== */
 
-supabaseClient.auth.onAuthStateChange(
-    async (event, session) => {
+db.auth.onAuthStateChange(
+    async (
+        event,
+        session
+    ) => {
 
         if (
             event === "SIGNED_IN" &&
             session
         ) {
 
-            const user =
-                session.user;
-
-
-            const {
-                data: profile
-            } =
-            await supabaseClient
-                .from("profiles")
-                .select(
-                    "id, username, avatar_url"
-                )
-                .eq(
-                    "id",
-                    user.id
-                )
-                .maybeSingle();
-
-
-            enterSite(
-                user,
-                profile
+            await showLoggedInUser(
+                session.user
             );
 
         }
@@ -1830,6 +1670,9 @@ supabaseClient.auth.onAuthStateChange(
             mainSite.style.display =
                 "none";
 
+            currentUser.textContent =
+                "";
+
         }
 
     }
@@ -1837,7 +1680,7 @@ supabaseClient.auth.onAuthStateChange(
 
 
 /* =====================================================
-   SEARCH
+SEARCH
 ===================================================== */
 
 const searchInput =
@@ -1845,15 +1688,18 @@ const searchInput =
         "searchInput"
     );
 
+
 const mangaCards =
     document.querySelectorAll(
         ".manga-card"
     );
 
+
 const genreButtons =
     document.querySelectorAll(
         ".genre"
     );
+
 
 let selectedGenre =
     "all";
@@ -1863,8 +1709,8 @@ function filterManga() {
 
     const search =
         searchInput.value
-        .toLowerCase()
-        .trim();
+            .toLowerCase()
+            .trim();
 
 
     mangaCards.forEach(
@@ -1872,18 +1718,16 @@ function filterManga() {
 
             const title =
                 card.dataset.title
-                .toLowerCase();
+                    .toLowerCase();
 
 
             const genres =
                 card.dataset.genres
-                .toLowerCase();
+                    .toLowerCase();
 
 
             const matchesSearch =
-                title.includes(
-                    search
-                );
+                title.includes(search);
 
 
             const matchesGenre =
@@ -1913,7 +1757,7 @@ searchInput.addEventListener(
 
 
 /* =====================================================
-   GENRE FILTER
+GENRE FILTER
 ===================================================== */
 
 genreButtons.forEach(
@@ -1950,13 +1794,6 @@ genreButtons.forEach(
 
     }
 );
-
-
-/* =====================================================
-   START WEBSITE
-===================================================== */
-
-checkUser();
 
 </script>
 
