@@ -9,21 +9,12 @@
 
 <style>
 
-/* =========================
-   ҮНДСЭН ӨНГӨ
-========================= */
-
 :root {
     --black: #030303;
     --olive: #726F5B;
     --brown: #2C2112;
     --cream: #EFEDE6;
 }
-
-
-/* =========================
-   RESET
-========================= */
 
 * {
     margin: 0;
@@ -74,7 +65,6 @@ body {
 .welcome-overlay {
 
     position: absolute;
-
     inset: 0;
 
     background:
@@ -89,18 +79,11 @@ body {
 .welcome-content {
 
     position: relative;
-
     z-index: 2;
 
     width: 90%;
-
     max-width: 700px;
 }
-
-
-/* =========================
-   LOGO
-========================= */
 
 .welcome-logo {
 
@@ -194,7 +177,7 @@ body {
 
 
 /* =========================
-   AUTH MODAL
+   LOGIN / REGISTER
 ========================= */
 
 .auth-modal {
@@ -219,7 +202,6 @@ body {
 }
 
 .auth-modal.active {
-
     display: flex;
 }
 
@@ -257,11 +239,9 @@ body {
     position: absolute;
 
     top: 12px;
-
     right: 15px;
 
     background: none;
-
     border: none;
 
     color: var(--cream);
@@ -306,12 +286,10 @@ body {
 }
 
 .auth-input:focus {
-
     border-color: var(--cream);
 }
 
 .auth-input::placeholder {
-
     color: rgba(239,237,230,0.5);
 }
 
@@ -339,7 +317,6 @@ body {
 }
 
 .auth-submit:hover {
-
     background: var(--olive);
 }
 
@@ -357,7 +334,6 @@ body {
 .auth-switch button {
 
     background: none;
-
     border: none;
 
     color: var(--cream);
@@ -391,18 +367,7 @@ body {
 
     min-height: 100vh;
 
-    background:
-        linear-gradient(
-            rgba(3,3,3,0.88),
-            rgba(3,3,3,0.94)
-        ),
-        url("IMG_1044.jpeg");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-attachment: fixed;
+    background: var(--black);
 }
 
 
@@ -418,7 +383,7 @@ header {
 
     z-index: 1000;
 
-    background: rgba(3,3,3,0.92);
+    background: rgba(3,3,3,0.94);
 
     backdrop-filter: blur(15px);
 
@@ -467,7 +432,6 @@ nav {
 }
 
 nav::-webkit-scrollbar {
-
     display: none;
 }
 
@@ -487,7 +451,6 @@ nav a {
 }
 
 nav a:hover {
-
     color: var(--cream);
 }
 
@@ -530,12 +493,15 @@ nav a:hover {
 
 
 /* =========================
-   HERO
+   THE AWARY / БҮХ МАНГА
+   4:3 BACKGROUND
 ========================= */
 
 .hero {
 
-    min-height: 70vh;
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
 
     position: relative;
 
@@ -548,6 +514,17 @@ nav a:hover {
     text-align: center;
 
     overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(3,3,3,0.45),
+            rgba(3,3,3,0.75)
+        ),
+        url("IMG_1044.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
 }
 
 .hero-content {
@@ -556,7 +533,7 @@ nav a:hover {
 
     z-index: 2;
 
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
 .hero h1 {
@@ -570,13 +547,13 @@ nav a:hover {
     letter-spacing: 4px;
 
     line-height: 1;
+
+    margin-bottom: 30px;
 }
 
 .hero-button {
 
     display: inline-block;
-
-    margin-top: 25px;
 
     padding: 13px 28px;
 
@@ -606,7 +583,7 @@ nav a:hover {
 
 
 /* =========================
-   SECTIONS
+   SECTION
 ========================= */
 
 .section {
@@ -869,7 +846,7 @@ nav a:hover {
 
 
 /* =========================
-   CHAPTER
+   CHAPTERS
 ========================= */
 
 .empty-state {
@@ -969,7 +946,7 @@ footer {
 
     .hero {
 
-        min-height: 60vh;
+        aspect-ratio: 4 / 3;
     }
 
     .hero h1 {
@@ -1013,6 +990,19 @@ footer {
 
 }
 
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media(min-width:701px) {
+
+    .hero {
+        min-height: 0;
+    }
+
+}
+
 </style>
 
 </head>
@@ -1027,490 +1017,495 @@ footer {
 
 <div id="welcomePage">
 
-<div class="welcome-overlay"></div>
+    <div class="welcome-overlay"></div>
 
-<div class="welcome-content">
+    <div class="welcome-content">
 
-<div class="welcome-logo">
-ᴛʜᴇ ᴀᴡᴀʀʏ
-</div>
+        <div class="welcome-logo">
+            ᴛʜᴇ ᴀᴡᴀʀʏ
+        </div>
 
-<p class="welcome-text">
-Чанартай мангагаа үнэгүй уншаарай.
-</p>
+        <p class="welcome-text">
+            Чанартай мангагаа үнэгүй уншаарай.
+        </p>
 
-<div class="welcome-buttons">
+        <div class="welcome-buttons">
 
-<button
-class="welcome-button"
-onclick="openLogin()">
+            <button
+                class="welcome-button"
+                onclick="openLogin()">
 
-НЭВТРЭХ
+                НЭВТРЭХ
 
-</button>
+            </button>
 
-<button
-class="welcome-button register"
-onclick="openRegister()">
+            <button
+                class="welcome-button register"
+                onclick="openRegister()">
 
-БҮРТГҮҮЛЭХ
+                БҮРТГҮҮЛЭХ
 
-</button>
+            </button>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </div>
 
 
 <!-- =====================================================
-     LOGIN / REGISTER MODAL
+     LOGIN / REGISTER
 ===================================================== -->
 
 <div
-class="auth-modal"
-id="authModal">
+    class="auth-modal"
+    id="authModal">
 
-<div class="auth-box">
+    <div class="auth-box">
 
-<button
-class="close-auth"
-onclick="closeAuth()">
+        <button
+            class="close-auth"
+            onclick="closeAuth()">
 
-×
-</button>
+            ×
 
-
-<!-- LOGIN -->
-
-<div id="loginForm">
-
-<div class="auth-title">
-НЭВТРЭХ
-</div>
-
-<input
-class="auth-input"
-id="loginEmail"
-type="email"
-placeholder="И-мэйл"
->
-
-<input
-class="auth-input"
-id="loginPassword"
-type="password"
-placeholder="Нууц үг"
->
-
-<button
-class="auth-submit"
-onclick="loginUser()">
-
-НЭВТРЭХ
-
-</button>
-
-<div
-class="auth-message"
-id="loginMessage">
-</div>
-
-<div class="auth-switch">
-
-Бүртгэлгүй юу?
-
-<button onclick="showRegister()">
-БҮРТГҮҮЛЭХ
-</button>
-
-</div>
-
-</div>
+        </button>
 
 
-<!-- REGISTER -->
+        <!-- LOGIN -->
 
-<div
-id="registerForm"
-style="display:none;">
+        <div id="loginForm">
 
-<div class="auth-title">
-БҮРТГҮҮЛЭХ
-</div>
+            <div class="auth-title">
+                НЭВТРЭХ
+            </div>
 
-<input
-class="auth-input"
-id="registerName"
-type="text"
-placeholder="Хэрэглэгчийн нэр"
->
+            <input
+                class="auth-input"
+                id="loginEmail"
+                type="email"
+                placeholder="И-мэйл">
 
-<input
-class="auth-input"
-id="registerEmail"
-type="email"
-placeholder="И-мэйл"
->
+            <input
+                class="auth-input"
+                id="loginPassword"
+                type="password"
+                placeholder="Нууц үг">
 
-<input
-class="auth-input"
-id="registerPassword"
-type="password"
-placeholder="Нууц үг"
->
+            <button
+                class="auth-submit"
+                onclick="loginUser()">
 
-<input
-class="auth-input"
-id="registerPassword2"
-type="password"
-placeholder="Нууц үгээ давтах"
->
+                НЭВТРЭХ
 
-<button
-class="auth-submit"
-onclick="registerUser()">
+            </button>
 
-БҮРТГҮҮЛЭХ
+            <div
+                class="auth-message"
+                id="loginMessage">
+            </div>
 
-</button>
+            <div class="auth-switch">
 
-<div
-class="auth-message"
-id="registerMessage">
-</div>
+                Бүртгэлгүй юу?
 
-<div class="auth-switch">
+                <button onclick="showRegister()">
+                    БҮРТГҮҮЛЭХ
+                </button>
 
-Аль хэдийн бүртгэлтэй юу?
+            </div>
 
-<button onclick="showLogin()">
-НЭВТРЭХ
-</button>
+        </div>
 
-</div>
 
-</div>
+        <!-- REGISTER -->
 
-</div>
+        <div
+            id="registerForm"
+            style="display:none;">
+
+            <div class="auth-title">
+                БҮРТГҮҮЛЭХ
+            </div>
+
+            <input
+                class="auth-input"
+                id="registerName"
+                type="text"
+                placeholder="Хэрэглэгчийн нэр">
+
+            <input
+                class="auth-input"
+                id="registerEmail"
+                type="email"
+                placeholder="И-мэйл">
+
+            <input
+                class="auth-input"
+                id="registerPassword"
+                type="password"
+                placeholder="Нууц үг">
+
+            <input
+                class="auth-input"
+                id="registerPassword2"
+                type="password"
+                placeholder="Нууц үгээ давтах">
+
+            <button
+                class="auth-submit"
+                onclick="registerUser()">
+
+                БҮРТГҮҮЛЭХ
+
+            </button>
+
+            <div
+                class="auth-message"
+                id="registerMessage">
+            </div>
+
+            <div class="auth-switch">
+
+                Аль хэдийн бүртгэлтэй юу?
+
+                <button onclick="showLogin()">
+                    НЭВТРЭХ
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
 
 <!-- =====================================================
-     MAIN MANGA SITE
+     MAIN SITE
 ===================================================== -->
 
 <div id="mainSite">
 
 
+<!-- HEADER -->
+
 <header>
 
-<div class="header-inner">
+    <div class="header-inner">
 
-<div class="logo">
-ᴛʜᴇ ᴀᴡᴀʀʏ
-</div>
+        <div class="logo">
+            ᴛʜᴇ ᴀᴡᴀʀʏ
+        </div>
 
-<nav>
+        <nav>
 
-<a href="#home">
-Нүүр
-</a>
+            <a href="#home">
+                Нүүр
+            </a>
 
-<a href="#featured">
-Онцлох манга
-</a>
+            <a href="#featured">
+                Онцлох манга
+            </a>
 
-<a href="#library">
-Бүх манга
-</a>
+            <a href="#library">
+                Бүх манга
+            </a>
 
-<a href="#genres">
-Төрөл
-</a>
+            <a href="#genres">
+                Төрөл
+            </a>
 
-<a href="#chapters">
-Бүлгүүд
-</a>
+            <a href="#chapters">
+                Бүлгүүд
+            </a>
 
-</nav>
+        </nav>
 
-<div class="user-area">
+        <div class="user-area">
 
-<span
-class="user-name"
-id="currentUser">
-</span>
+            <span
+                class="user-name"
+                id="currentUser">
+            </span>
 
-<button
-class="logout-button"
-onclick="logoutUser()">
+            <button
+                class="logout-button"
+                onclick="logoutUser()">
 
-Гарах
+                Гарах
 
-</button>
+            </button>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section
-class="hero"
-id="home">
+    class="hero"
+    id="home">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<h1>
-ᴛʜᴇ ᴀᴡᴀʀʏ
-</h1>
+        <h1>
+            ᴛʜᴇ ᴀᴡᴀʀʏ
+        </h1>
 
-<a
-href="#library"
-class="hero-button">
+        <a
+            href="#library"
+            class="hero-button">
 
-БҮХ МАНГА
+            БҮХ МАНГА
 
-</a>
+        </a>
 
-</div>
+    </div>
 
 </section>
 
 
-<!-- FEATURED -->
+<!-- =====================================================
+     FEATURED
+===================================================== -->
 
 <section
-class="section"
-id="featured">
+    class="section"
+    id="featured">
 
-<h2 class="section-title">
-Онцлох манга
-</h2>
+    <h2 class="section-title">
+        Онцлох манга
+    </h2>
 
-<div class="featured-row">
-
-
-<div class="featured-card">
-
-<img
-src="90FB049D-B0DF-4E4B-99E4-300843B5911A.png"
-alt="Дахин гэрэл өөд"
->
-
-<h3>
-Дахин гэрэл өөд
-</h3>
-
-<p>
-Удахгүй
-</p>
-
-</div>
+    <div class="featured-row">
 
 
-<div class="featured-card">
+        <!-- ДАХИН ГЭРЭЛ ӨӨД -->
 
-<img
-src="photo-output.jpeg"
-alt="Та хоёрын зуучлагч болохыг хүсэхгүй байна"
->
+        <div class="featured-card">
 
-<h3>
-Та хоёрын зуучлагч болохыг хүсэхгүй байна
-</h3>
+            <img
+                src="90FB049D-B0DF-4E4B-99E4-300843B5911A.png"
+                alt="Дахин гэрэл өөд">
 
-<p>
-Удахгүй
-</p>
+            <h3>
+                Дахин гэрэл өөд
+            </h3>
 
-</div>
+            <p>
+                Удахгүй
+            </p>
+
+        </div>
 
 
-</div>
+        <!-- ТА ХОЁРЫН ЗУУЧЛАГЧ -->
+
+        <div class="featured-card">
+
+            <img
+                src="photo-output.jpeg"
+                alt="Та хоёрын зуучлагч болохыг хүсэхгүй байна">
+
+            <h3>
+                Та хоёрын зуучлагч болохыг хүсэхгүй байна
+            </h3>
+
+            <p>
+                Удахгүй
+            </p>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
-<!-- LIBRARY -->
+<!-- =====================================================
+     ALL MANGA
+===================================================== -->
 
 <section
-class="section"
-id="library">
+    class="section"
+    id="library">
 
-<h2 class="section-title">
-Бүх манга
-</h2>
-
-<input
-class="search"
-id="searchInput"
-type="text"
-placeholder="🔍 Манганы нэрээр хайх..."
->
+    <h2 class="section-title">
+        Бүх манга
+    </h2>
 
 
-<!-- GENRES -->
-
-<div
-class="genre-buttons"
-id="genres">
-
-<button
-class="genre active"
-data-genre="all">
-
-Бүгд
-
-</button>
-
-<button
-class="genre"
-data-genre="fantasy">
-
-Уран зөгнөл
-
-</button>
-
-<button
-class="genre"
-data-genre="reincarnation">
-
-Дахин төрөлт
-
-</button>
-
-<button
-class="genre"
-data-genre="comedy">
-
-Инээдэм
-
-</button>
-
-<button
-class="genre"
-data-genre="school">
-
-Сургуулийн амьдрал
-
-</button>
-
-<button
-class="genre"
-data-genre="romance">
-
-Романтик
-
-</button>
-
-</div>
+    <input
+        class="search"
+        id="searchInput"
+        type="text"
+        placeholder="🔍 Манганы нэрээр хайх...">
 
 
-<!-- MANGA -->
+    <!-- GENRES -->
 
-<div
-class="manga-grid"
-id="mangaGrid">
+    <div
+        class="genre-buttons"
+        id="genres">
 
+        <button
+            class="genre active"
+            data-genre="all">
 
-<!-- ДАХИН ГЭРЭЛ ӨӨД -->
+            Бүгд
 
-<div
-class="manga-card"
-data-title="Дахин гэрэл өөд"
-data-genres="fantasy reincarnation">
+        </button>
 
-<img
-class="manga-cover"
-src="90FB049D-B0DF-4E4B-99E4-300843B5911A.png"
-alt="Дахин гэрэл өөд"
->
+        <button
+            class="genre"
+            data-genre="fantasy">
 
-<div class="manga-info">
+            Уран зөгнөл
 
-<div class="manga-title">
-Дахин гэрэл өөд
-</div>
+        </button>
 
-<div class="manga-genres">
-Уран зөгнөл • Дахин төрөлт
-</div>
+        <button
+            class="genre"
+            data-genre="reincarnation">
 
-<div class="manga-status">
-● Удахгүй
-</div>
+            Дахин төрөлт
 
-</div>
+        </button>
 
-</div>
+        <button
+            class="genre"
+            data-genre="comedy">
 
+            Инээдэм
 
-<!-- ТА ХОЁРЫН ЗУУЧЛАГЧ -->
+        </button>
 
-<div
-class="manga-card"
-data-title="Та хоёрын зуучлагч болохыг хүсэхгүй байна"
-data-genres="comedy school romance">
+        <button
+            class="genre"
+            data-genre="school">
 
-<img
-class="manga-cover"
-src="photo-output.jpeg"
-alt="Та хоёрын зуучлагч болохыг хүсэхгүй байна"
->
+            Сургуулийн амьдрал
 
-<div class="manga-info">
+        </button>
 
-<div class="manga-title">
-Та хоёрын зуучлагч болохыг хүсэхгүй байна
-</div>
+        <button
+            class="genre"
+            data-genre="romance">
 
-<div class="manga-genres">
-Инээдэм • Сургуулийн амьдрал • Романтик
-</div>
+            Романтик
 
-<div class="manga-status">
-● Удахгүй
-</div>
+        </button>
 
-</div>
-
-</div>
+    </div>
 
 
-</div>
+    <!-- MANGA GRID -->
+
+    <div
+        class="manga-grid"
+        id="mangaGrid">
+
+
+        <!-- ДАХИН ГЭРЭЛ ӨӨД -->
+
+        <div
+            class="manga-card"
+            data-title="Дахин гэрэл өөд"
+            data-genres="fantasy reincarnation">
+
+            <img
+                class="manga-cover"
+                src="90FB049D-B0DF-4E4B-99E4-300843B5911A.png"
+                alt="Дахин гэрэл өөд">
+
+            <div class="manga-info">
+
+                <div class="manga-title">
+                    Дахин гэрэл өөд
+                </div>
+
+                <div class="manga-genres">
+                    Уран зөгнөл • Дахин төрөлт
+                </div>
+
+                <div class="manga-status">
+                    ● Удахгүй
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ТА ХОЁРЫН ЗУУЧЛАГЧ -->
+
+        <div
+            class="manga-card"
+            data-title="Та хоёрын зуучлагч болохыг хүсэхгүй байна"
+            data-genres="comedy school romance">
+
+            <img
+                class="manga-cover"
+                src="photo-output.jpeg"
+                alt="Та хоёрын зуучлагч болохыг хүсэхгүй байна">
+
+            <div class="manga-info">
+
+                <div class="manga-title">
+                    Та хоёрын зуучлагч болохыг хүсэхгүй байна
+                </div>
+
+                <div class="manga-genres">
+                    Инээдэм • Сургуулийн амьдрал • Романтик
+                </div>
+
+                <div class="manga-status">
+                    ● Удахгүй
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
-<!-- CHAPTERS -->
+<!-- =====================================================
+     CHAPTERS
+===================================================== -->
 
 <section
-class="section"
-id="chapters">
+    class="section"
+    id="chapters">
 
-<h2 class="section-title">
-Шинэ бүлгүүд
-</h2>
+    <h2 class="section-title">
+        Шинэ бүлгүүд
+    </h2>
 
-<div class="empty-state">
+    <div class="empty-state">
 
-<strong>
-Одоогоор бүлэг гараагүй байна.
-</strong>
+        <strong>
+            Одоогоор бүлэг гараагүй байна.
+        </strong>
 
-<p>
-Мангануудын бүлгүүд
-гарч эхлэх үед энд харагдана.
-</p>
+        <p>
+            Мангануудын бүлгүүд
+            гарч эхлэх үед энд харагдана.
+        </p>
 
-</div>
+    </div>
 
 </section>
 
@@ -1519,13 +1514,13 @@ id="chapters">
 
 <footer>
 
-<div class="footer-logo">
-ᴛʜᴇ ᴀᴡᴀʀʏ
-</div>
+    <div class="footer-logo">
+        ᴛʜᴇ ᴀᴡᴀʀʏ
+    </div>
 
-<p style="margin-top:15px;">
-© 2026 The Awary Manga
-</p>
+    <p style="margin-top:15px;">
+        © 2026 The Awary Manga
+    </p>
 
 </footer>
 
@@ -1535,9 +1530,9 @@ id="chapters">
 
 <script>
 
-/* =====================================================
-   AUTH — DEMO
-===================================================== */
+/* =========================
+   ELEMENTS
+========================= */
 
 const welcomePage =
 document.getElementById("welcomePage");
@@ -1554,6 +1549,13 @@ document.getElementById("loginForm");
 const registerForm =
 document.getElementById("registerForm");
 
+const currentUser =
+document.getElementById("currentUser");
+
+
+/* =========================
+   AUTH MODAL
+========================= */
 
 function openLogin() {
 
@@ -1562,7 +1564,6 @@ function openLogin() {
     showLogin();
 }
 
-
 function openRegister() {
 
     authModal.classList.add("active");
@@ -1570,12 +1571,10 @@ function openRegister() {
     showRegister();
 }
 
-
 function closeAuth() {
 
     authModal.classList.remove("active");
 }
-
 
 function showLogin() {
 
@@ -1583,7 +1582,6 @@ function showLogin() {
 
     registerForm.style.display = "none";
 }
-
 
 function showRegister() {
 
@@ -1626,7 +1624,12 @@ function registerUser() {
         .getElementById("registerMessage");
 
 
-    if (!name || !email || !password || !password2) {
+    if (
+        !name ||
+        !email ||
+        !password ||
+        !password2
+    ) {
 
         message.textContent =
             "Бүх талбарыг бөглөнө үү.";
@@ -1676,11 +1679,7 @@ function registerUser() {
 
     setTimeout(() => {
 
-        loginForm.style.display =
-            "block";
-
-        registerForm.style.display =
-            "none";
+        showLogin();
 
         document
         .getElementById("loginEmail")
@@ -1708,11 +1707,9 @@ function loginUser() {
         .getElementById("loginPassword")
         .value;
 
-
     const message =
         document
         .getElementById("loginMessage");
-
 
     const savedUser =
         localStorage.getItem(
@@ -1749,6 +1746,7 @@ function loginUser() {
 
 
         closeAuth();
+
 
         welcomePage.style.display =
             "none";
@@ -1824,9 +1822,9 @@ if (
 }
 
 
-/* =====================================================
-   SEARCH + GENRE FILTER
-===================================================== */
+/* =========================
+   SEARCH
+========================= */
 
 const searchInput =
 document.getElementById(
@@ -1893,6 +1891,10 @@ searchInput.addEventListener(
     filterManga
 );
 
+
+/* =========================
+   GENRE FILTER
+========================= */
 
 genreButtons.forEach(button => {
 
