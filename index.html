@@ -35,7 +35,7 @@ body {
 }
 
 /* =========================
-WELCOME
+   WELCOME PAGE
 ========================= */
 
 #welcomePage {
@@ -132,7 +132,7 @@ WELCOME
 }
 
 /* =========================
-AUTH
+   LOGIN / REGISTER
 ========================= */
 
 .auth-modal {
@@ -230,11 +230,6 @@ AUTH
     background: var(--olive);
 }
 
-.auth-submit:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
 .auth-switch {
     margin-top: 20px;
     text-align: center;
@@ -259,7 +254,7 @@ AUTH
 }
 
 /* =========================
-MAIN
+   MAIN SITE
 ========================= */
 
 #mainSite {
@@ -269,7 +264,7 @@ MAIN
 }
 
 /* =========================
-HEADER
+   HEADER
 ========================= */
 
 header {
@@ -347,7 +342,7 @@ nav a:hover {
 }
 
 /* =========================
-HERO
+   HERO
 ========================= */
 
 .hero {
@@ -405,7 +400,7 @@ HERO
 }
 
 /* =========================
-SECTION
+   SECTION
 ========================= */
 
 .section {
@@ -422,7 +417,7 @@ SECTION
 }
 
 /* =========================
-FEATURED
+   FEATURED
 ========================= */
 
 .featured-row {
@@ -461,7 +456,7 @@ FEATURED
 }
 
 /* =========================
-SEARCH
+   SEARCH
 ========================= */
 
 .search {
@@ -485,7 +480,7 @@ SEARCH
 }
 
 /* =========================
-GENRES
+   GENRES
 ========================= */
 
 .genre-buttons {
@@ -520,12 +515,16 @@ GENRES
 }
 
 /* =========================
-MANGA GRID
+   MANGA GRID
 ========================= */
 
 .manga-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(180px,1fr)
+        );
     gap: 22px;
 }
 
@@ -575,7 +574,7 @@ MANGA GRID
 }
 
 /* =========================
-EMPTY
+   CHAPTERS
 ========================= */
 
 .empty-state {
@@ -600,7 +599,7 @@ EMPTY
 }
 
 /* =========================
-FOOTER
+   FOOTER
 ========================= */
 
 footer {
@@ -620,7 +619,7 @@ footer {
 }
 
 /* =========================
-MOBILE
+   MOBILE
 ========================= */
 
 @media(max-width:700px) {
@@ -667,7 +666,8 @@ MOBILE
     }
 
     .manga-grid {
-        grid-template-columns: repeat(2,minmax(0,1fr));
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
         gap: 13px;
     }
 
@@ -676,15 +676,23 @@ MOBILE
     }
 }
 
+@media(min-width:701px) {
+
+    .hero {
+        min-height: 0;
+    }
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<!-- =========================
-WELCOME PAGE
-========================= -->
+<!-- =====================================================
+     WELCOME PAGE
+===================================================== -->
 
 <div id="welcomePage">
 
@@ -720,10 +728,9 @@ WELCOME PAGE
 
 </div>
 
-
-<!-- =========================
-AUTH MODAL
-========================= -->
+<!-- =====================================================
+     LOGIN / REGISTER
+===================================================== -->
 
 <div
     class="auth-modal"
@@ -736,7 +743,6 @@ AUTH MODAL
             onclick="closeAuth()">
             ×
         </button>
-
 
         <!-- LOGIN -->
 
@@ -760,7 +766,6 @@ AUTH MODAL
 
             <button
                 class="auth-submit"
-                id="loginButton"
                 onclick="loginUser()">
                 НЭВТРЭХ
             </button>
@@ -781,7 +786,6 @@ AUTH MODAL
             </div>
 
         </div>
-
 
         <!-- REGISTER -->
 
@@ -819,7 +823,6 @@ AUTH MODAL
 
             <button
                 class="auth-submit"
-                id="registerButton"
                 onclick="registerUser()">
                 БҮРТГҮҮЛЭХ
             </button>
@@ -845,10 +848,9 @@ AUTH MODAL
 
 </div>
 
-
-<!-- =========================
-MAIN SITE
-========================= -->
+<!-- =====================================================
+     MAIN SITE
+===================================================== -->
 
 <div id="mainSite">
 
@@ -893,6 +895,7 @@ MAIN SITE
 
 </header>
 
+<!-- HERO -->
 
 <section
     class="hero"
@@ -914,6 +917,7 @@ MAIN SITE
 
 </section>
 
+<!-- FEATURED -->
 
 <section
     class="section"
@@ -924,6 +928,8 @@ MAIN SITE
     </h2>
 
     <div class="featured-row">
+
+        <!-- ДАХИН ГЭРЭЛ ӨӨД -->
 
         <div class="featured-card">
 
@@ -941,15 +947,16 @@ MAIN SITE
 
         </div>
 
+        <!-- ХАЙРЫН ЗУУЧЛАГЧ -->
 
         <div class="featured-card">
 
             <img
                 src="photo-output.jpeg"
-                alt="Та хоёрын зуучлагч болохыг хүсэхгүй байна">
+                alt="Хайрын зуучлагч болохыг хүсэхгүй байна!">
 
             <h3>
-                Та хоёрын зуучлагч болохыг хүсэхгүй байна
+                Хайрын зуучлагч болохыг хүсэхгүй байна!
             </h3>
 
             <p>
@@ -962,6 +969,7 @@ MAIN SITE
 
 </section>
 
+<!-- ALL MANGA -->
 
 <section
     class="section"
@@ -976,7 +984,6 @@ MAIN SITE
         id="searchInput"
         type="text"
         placeholder="🔍 Манганы нэрээр хайх...">
-
 
     <div
         class="genre-buttons"
@@ -1020,11 +1027,11 @@ MAIN SITE
 
     </div>
 
-
     <div
         class="manga-grid"
         id="mangaGrid">
 
+        <!-- ДАХИН ГЭРЭЛ ӨӨД -->
 
         <div
             class="manga-card"
@@ -1054,21 +1061,22 @@ MAIN SITE
 
         </div>
 
+        <!-- ХАЙРЫН ЗУУЧЛАГЧ -->
 
         <div
             class="manga-card"
-            data-title="Та хоёрын зуучлагч болохыг хүсэхгүй байна"
+            data-title="Хайрын зуучлагч болохыг хүсэхгүй байна!"
             data-genres="comedy school romance">
 
             <img
                 class="manga-cover"
                 src="photo-output.jpeg"
-                alt="Та хоёрын зуучлагч болохыг хүсэхгүй байна">
+                alt="Хайрын зуучлагч болохыг хүсэхгүй байна!">
 
             <div class="manga-info">
 
                 <div class="manga-title">
-                    Та хоёрын зуучлагч болохыг хүсэхгүй байна
+                    Хайрын зуучлагч болохыг хүсэхгүй байна!
                 </div>
 
                 <div class="manga-genres">
@@ -1083,11 +1091,11 @@ MAIN SITE
 
         </div>
 
-
     </div>
 
 </section>
 
+<!-- CHAPTERS -->
 
 <section
     class="section"
@@ -1112,6 +1120,7 @@ MAIN SITE
 
 </section>
 
+<!-- FOOTER -->
 
 <footer>
 
@@ -1127,30 +1136,27 @@ MAIN SITE
 
 </div>
 
-
 <script>
 
 /* =====================================================
-SUPABASE
+   SUPABASE
 ===================================================== */
 
 const SUPABASE_URL =
     "https://qfauervptngofdablbsj.supabase.co";
 
+const SUPABASE_KEY =
+    "sb_publishable_IlQdRIiCjBj_bWsXOWBteg_l_3w8m7I";
 
-const SUPABASE_PUBLISHABLE_KEY =
-    "YOUR_PUBLISHABLE_KEY";
-
-
-const db =
+const supabaseClient =
     window.supabase.createClient(
         SUPABASE_URL,
-        SUPABASE_PUBLISHABLE_KEY
+        SUPABASE_KEY
     );
 
 
 /* =====================================================
-ELEMENTS
+   ELEMENTS
 ===================================================== */
 
 const welcomePage =
@@ -1173,7 +1179,7 @@ const currentUser =
 
 
 /* =====================================================
-AUTH MODAL
+   AUTH MODAL
 ===================================================== */
 
 function openLogin() {
@@ -1182,8 +1188,8 @@ function openLogin() {
 
     showLogin();
 
+    document.getElementById("loginMessage").textContent = "";
 }
-
 
 function openRegister() {
 
@@ -1191,78 +1197,167 @@ function openRegister() {
 
     showRegister();
 
+    document.getElementById("registerMessage").textContent = "";
 }
-
 
 function closeAuth() {
 
     authModal.classList.remove("active");
-
 }
-
 
 function showLogin() {
 
     loginForm.style.display = "block";
 
     registerForm.style.display = "none";
-
 }
-
 
 function showRegister() {
 
     loginForm.style.display = "none";
 
     registerForm.style.display = "block";
-
 }
 
 
 /* =====================================================
-REGISTER
+   SHOW MAIN SITE
+===================================================== */
+
+function showMainSite(username) {
+
+    currentUser.textContent =
+        username || "Хэрэглэгч";
+
+    welcomePage.style.display = "none";
+
+    mainSite.style.display = "block";
+
+    closeAuth();
+
+    window.scrollTo(0, 0);
+}
+
+function showWelcome() {
+
+    mainSite.style.display = "none";
+
+    welcomePage.style.display = "flex";
+}
+
+
+/* =====================================================
+   CREATE PROFILE
+===================================================== */
+
+async function createProfile(user, username) {
+
+    const {
+        error
+    } = await supabaseClient
+        .from("profiles")
+        .insert({
+            id: user.id,
+            username: username,
+            avatar_url: null
+        });
+
+    if (error) {
+
+        if (
+            error.code === "23505"
+        ) {
+            return true;
+        }
+
+        console.error(
+            "Profile error:",
+            error
+        );
+
+        return false;
+    }
+
+    return true;
+}
+
+
+/* =====================================================
+   GET PROFILE
+===================================================== */
+
+async function getProfile(user) {
+
+    const {
+        data,
+        error
+    } = await supabaseClient
+        .from("profiles")
+        .select("username")
+        .eq("id", user.id)
+        .maybeSingle();
+
+    if (error) {
+
+        console.error(
+            "Get profile error:",
+            error
+        );
+
+        return null;
+    }
+
+    return data;
+}
+
+
+/* =====================================================
+   REGISTER
 ===================================================== */
 
 async function registerUser() {
 
     const name =
         document
-            .getElementById("registerName")
-            .value
-            .trim();
+        .getElementById("registerName")
+        .value
+        .trim();
 
     const email =
         document
-            .getElementById("registerEmail")
-            .value
-            .trim();
+        .getElementById("registerEmail")
+        .value
+        .trim();
 
     const password =
         document
-            .getElementById("registerPassword")
-            .value;
+        .getElementById("registerPassword")
+        .value;
 
     const password2 =
         document
-            .getElementById("registerPassword2")
-            .value;
+        .getElementById("registerPassword2")
+        .value;
 
     const message =
         document
-            .getElementById("registerMessage");
-
-    const button =
-        document
-            .getElementById("registerButton");
+        .getElementById("registerMessage");
 
 
-    if (!name || !email || !password || !password2) {
+    message.textContent = "";
+
+
+    if (
+        !name ||
+        !email ||
+        !password ||
+        !password2
+    ) {
 
         message.textContent =
             "Бүх талбарыг бөглөнө үү.";
 
         return;
-
     }
 
 
@@ -1272,7 +1367,6 @@ async function registerUser() {
             "Нууц үг таарахгүй байна.";
 
         return;
-
     }
 
 
@@ -1282,170 +1376,98 @@ async function registerUser() {
             "Нууц үг хамгийн багадаа 6 тэмдэгт байна.";
 
         return;
-
     }
 
 
-    button.disabled = true;
-
     message.textContent =
-        "Бүртгүүлж байна...";
+        "Бүртгэл үүсгэж байна...";
 
 
-    try {
+    const {
+        data,
+        error
+    } = await supabaseClient.auth.signUp({
 
-        const {
-            data,
-            error
-        } =
-            await db.auth.signUp({
+        email: email,
 
-                email: email,
+        password: password,
 
-                password: password,
-
-                options: {
-
-                    data: {
-                        username: name
-                    }
-
-                }
-
-            });
-
-
-        if (error) {
-
-            console.error(error);
-
-            if (
-                error.message
-                    .toLowerCase()
-                    .includes("rate limit")
-            ) {
-
-                message.textContent =
-                    "И-мэйл илгээлтийн хязгаарт хүрсэн байна. Түр хүлээгээд дахин оролдоно уу.";
-
-            } else {
-
-                message.textContent =
-                    error.message;
-
+        options: {
+            data: {
+                username: name
             }
-
-            return;
-
         }
 
-
-        if (!data.user) {
-
-            message.textContent =
-                "Хэрэглэгч үүссэнгүй.";
-
-            return;
-
-        }
+    });
 
 
-        /*
-        PROFILE ҮҮСГЭХ
-        */
-
-        const {
-            error: profileError
-        } =
-            await db
-                .from("profiles")
-                .insert({
-
-                    id: data.user.id,
-
-                    username: name
-
-                });
-
-
-        if (profileError) {
-
-            console.error(
-                "Profile error:",
-                profileError
-            );
-
-        }
-
-
-        /*
-        EMAIL CONFIRMATION
-        */
-
-        if (!data.session) {
-
-            message.textContent =
-                "Бүртгэл амжилттай! Gmail-ээ шалгаад баталгаажуулна уу.";
-
-        } else {
-
-            message.textContent =
-                "Бүртгэл амжилттай!";
-
-        }
-
-
-        setTimeout(() => {
-
-            showLogin();
-
-            document
-                .getElementById("loginEmail")
-                .value = email;
-
-        }, 1800);
-
-
-    } catch (error) {
+    if (error) {
 
         console.error(error);
 
         message.textContent =
-            "Алдаа гарлаа. Дахин оролдоно уу.";
+            error.message;
 
-    } finally {
-
-        button.disabled = false;
-
+        return;
     }
+
+
+    /*
+       Email confirmation ON байвал
+       data.session null байж болно.
+    */
+
+    if (!data.session) {
+
+        message.textContent =
+            "Бүртгэл үүслээ. Gmail-ээ шалгаад баталгаажуулах холбоос дээр дарна уу.";
+
+        return;
+    }
+
+
+    await createProfile(
+        data.user,
+        name
+    );
+
+
+    message.textContent =
+        "Бүртгэл амжилттай үүслээ!";
+
+
+    setTimeout(() => {
+
+        showMainSite(name);
+
+    }, 800);
 
 }
 
 
 /* =====================================================
-LOGIN
+   LOGIN
 ===================================================== */
 
 async function loginUser() {
 
     const email =
         document
-            .getElementById("loginEmail")
-            .value
-            .trim();
+        .getElementById("loginEmail")
+        .value
+        .trim();
 
     const password =
         document
-            .getElementById("loginPassword")
-            .value;
+        .getElementById("loginPassword")
+        .value;
 
     const message =
         document
-            .getElementById("loginMessage");
+        .getElementById("loginMessage");
 
-    const button =
-        document
-            .getElementById("loginButton");
+
+    message.textContent = "";
 
 
     if (!email || !password) {
@@ -1454,161 +1476,123 @@ async function loginUser() {
             "И-мэйл болон нууц үгээ оруулна уу.";
 
         return;
-
     }
 
-
-    button.disabled = true;
 
     message.textContent =
         "Нэвтэрч байна...";
 
 
-    try {
+    const {
+        data,
+        error
+    } = await supabaseClient.auth.signInWithPassword({
 
-        const {
-            data,
-            error
-        } =
-            await db.auth.signInWithPassword({
+        email: email,
 
-                email: email,
+        password: password
 
-                password: password
-
-            });
+    });
 
 
-        if (error) {
-
-            console.error(error);
-
-            message.textContent =
-                "И-мэйл эсвэл нууц үг буруу байна.";
-
-            return;
-
-        }
-
-
-        await showLoggedInUser(
-            data.user
-        );
-
-
-        closeAuth();
-
-
-    } catch (error) {
+    if (error) {
 
         console.error(error);
 
         message.textContent =
+            "И-мэйл эсвэл нууц үг буруу байна.";
+
+        return;
+    }
+
+
+    if (!data.user) {
+
+        message.textContent =
             "Нэвтрэх үед алдаа гарлаа.";
 
-    } finally {
-
-        button.disabled = false;
-
+        return;
     }
+
+
+    /*
+       Profile байгаа эсэхийг шалгана.
+    */
+
+    let profile =
+        await getProfile(
+            data.user
+        );
+
+
+    /*
+       Profile байхгүй бол
+       Auth metadata-аас username авч үүсгэнэ.
+    */
+
+    if (!profile) {
+
+        const username =
+            data.user.user_metadata?.username
+            ||
+            email.split("@")[0];
+
+        await createProfile(
+            data.user,
+            username
+        );
+
+        profile =
+            await getProfile(
+                data.user
+            );
+    }
+
+
+    const username =
+        profile?.username
+        ||
+        data.user.user_metadata?.username
+        ||
+        email.split("@")[0];
+
+
+    showMainSite(username);
 
 }
 
 
 /* =====================================================
-SHOW USER
-===================================================== */
-
-async function showLoggedInUser(user) {
-
-    if (!user) return;
-
-
-    let username =
-        user
-            .user_metadata
-            ?.username;
-
-
-    if (!username) {
-
-        username =
-            user.email
-                ?.split("@")[0] ||
-            "User";
-
-    }
-
-
-    const {
-        data: profile,
-        error
-    } =
-        await db
-            .from("profiles")
-            .select("username")
-            .eq("id", user.id)
-            .maybeSingle();
-
-
-    if (!error && profile?.username) {
-
-        username =
-            profile.username;
-
-    }
-
-
-    currentUser.textContent =
-        username;
-
-
-    welcomePage.style.display =
-        "none";
-
-    mainSite.style.display =
-        "block";
-
-
-    window.scrollTo(
-        0,
-        0
-    );
-
-}
-
-
-/* =====================================================
-LOGOUT
+   LOGOUT
 ===================================================== */
 
 async function logoutUser() {
 
-    await db.auth.signOut();
+    await supabaseClient.auth.signOut();
 
-
-    currentUser.textContent =
-        "";
-
-    mainSite.style.display =
-        "none";
-
-    welcomePage.style.display =
-        "flex";
+    showWelcome();
 
 }
 
 
 /* =====================================================
-CHECK CURRENT SESSION
+   CHECK CURRENT SESSION
 ===================================================== */
 
-async function checkSession() {
+async function checkCurrentUser() {
 
     const {
-        data
-    } =
-        await db.auth.getSession();
+        data,
+        error
+    } = await supabaseClient.auth.getSession();
+
+
+    if (error) {
+
+        console.error(error);
+
+        return;
+    }
 
 
     const session =
@@ -1617,62 +1601,76 @@ async function checkSession() {
 
     if (!session) {
 
-        welcomePage.style.display =
-            "flex";
-
-        mainSite.style.display =
-            "none";
+        showWelcome();
 
         return;
-
     }
 
 
-    await showLoggedInUser(
-        session.user
-    );
+    const user =
+        session.user;
 
+
+    let profile =
+        await getProfile(user);
+
+
+    if (!profile) {
+
+        const username =
+            user.user_metadata?.username
+            ||
+            user.email.split("@")[0];
+
+        await createProfile(
+            user,
+            username
+        );
+
+        profile =
+            await getProfile(user);
+    }
+
+
+    const username =
+        profile?.username
+        ||
+        user.user_metadata?.username
+        ||
+        user.email.split("@")[0];
+
+
+    showMainSite(username);
 }
 
 
-checkSession();
-
-
 /* =====================================================
-AUTH STATE
+   AUTH STATE CHANGE
 ===================================================== */
 
-db.auth.onAuthStateChange(
-    async (
-        event,
-        session
-    ) => {
+supabaseClient.auth.onAuthStateChange(
+    async (event, session) => {
+
+        if (
+            event === "SIGNED_OUT"
+        ) {
+
+            showWelcome();
+
+            return;
+        }
 
         if (
             event === "SIGNED_IN" &&
             session
         ) {
 
-            await showLoggedInUser(
-                session.user
-            );
+            /*
+               Login функц өөрөө main site
+               харуулдаг тул энд давхар хийхгүй.
+            */
 
-        }
-
-
-        if (
-            event === "SIGNED_OUT"
-        ) {
-
-            welcomePage.style.display =
-                "flex";
-
-            mainSite.style.display =
-                "none";
-
-            currentUser.textContent =
-                "";
-
+            return;
         }
 
     }
@@ -1680,7 +1678,7 @@ db.auth.onAuthStateChange(
 
 
 /* =====================================================
-SEARCH
+   SEARCH
 ===================================================== */
 
 const searchInput =
@@ -1688,18 +1686,15 @@ const searchInput =
         "searchInput"
     );
 
-
 const mangaCards =
     document.querySelectorAll(
         ".manga-card"
     );
 
-
 const genreButtons =
     document.querySelectorAll(
         ".genre"
     );
-
 
 let selectedGenre =
     "all";
@@ -1709,43 +1704,40 @@ function filterManga() {
 
     const search =
         searchInput.value
-            .toLowerCase()
-            .trim();
+        .toLowerCase()
+        .trim();
 
 
-    mangaCards.forEach(
-        card => {
+    mangaCards.forEach(card => {
 
-            const title =
-                card.dataset.title
-                    .toLowerCase();
+        const title =
+            card.dataset.title
+            .toLowerCase();
 
-
-            const genres =
-                card.dataset.genres
-                    .toLowerCase();
+        const genres =
+            card.dataset.genres
+            .toLowerCase();
 
 
-            const matchesSearch =
-                title.includes(search);
+        const matchesSearch =
+            title.includes(search);
 
 
-            const matchesGenre =
-                selectedGenre === "all"
-                ||
-                genres.includes(
-                    selectedGenre
-                );
+        const matchesGenre =
+            selectedGenre === "all"
+            ||
+            genres.includes(
+                selectedGenre
+            );
 
 
-            card.style.display =
-                matchesSearch &&
-                matchesGenre
-                    ? ""
-                    : "none";
+        card.style.display =
+            matchesSearch &&
+            matchesGenre
+            ? ""
+            : "none";
 
-        }
-    );
+    });
 
 }
 
@@ -1757,43 +1749,46 @@ searchInput.addEventListener(
 
 
 /* =====================================================
-GENRE FILTER
+   GENRE FILTER
 ===================================================== */
 
-genreButtons.forEach(
-    button => {
+genreButtons.forEach(button => {
 
-        button.addEventListener(
-            "click",
-            () => {
+    button.addEventListener(
+        "click",
+        () => {
 
-                genreButtons.forEach(
-                    btn => {
+            genreButtons.forEach(btn => {
 
-                        btn.classList.remove(
-                            "active"
-                        );
-
-                    }
-                );
-
-
-                button.classList.add(
+                btn.classList.remove(
                     "active"
                 );
 
-
-                selectedGenre =
-                    button.dataset.genre;
+            });
 
 
-                filterManga();
+            button.classList.add(
+                "active"
+            );
 
-            }
-        );
 
-    }
-);
+            selectedGenre =
+                button.dataset.genre;
+
+
+            filterManga();
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   START
+===================================================== */
+
+checkCurrentUser();
 
 </script>
 
